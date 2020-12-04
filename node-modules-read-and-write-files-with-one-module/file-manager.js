@@ -1,4 +1,4 @@
-const fs = require('../node-modules-native/node_modules/fs');
+const fs = require('fs');
 
 const readFile = (fileName, callback) => {
   fs.readFile(fileName, 'utf8', (err, data) => {
