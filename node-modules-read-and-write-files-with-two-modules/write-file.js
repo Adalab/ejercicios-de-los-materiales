@@ -1,4 +1,4 @@
-const fs = require('../node-import-export-v1/node_modules/fs');
+const fs = require('../node-import-export-add/node_modules/fs');
 
 const writeFile = (fileName, fileContent, callback) => {
   fs.writeFile(fileName, fileContent, err => {
