@@ -15,7 +15,7 @@
 .rotate {
   animation-name: rotate;
   animation-timing-function: ease-in-out;
-  animation-duration: 10000ms;
+  animation-duration: 5000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -25,7 +25,7 @@
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(360deg) scale(0.1);
+    transform: rotate(360deg) scale(0.01);
   }
   100% {
     transform: rotate(720deg);
