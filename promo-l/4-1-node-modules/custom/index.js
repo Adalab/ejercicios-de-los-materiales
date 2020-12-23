@@ -1,4 +1,5 @@
-const poligonArea = require('./polygon-area');
+const poligonArea = require('./polygon-area'); // vieja
+// import poligonArea from './polygon-area' // nueva
 
 const triangleBase = 2;
 const triangleHeight = 3;

@@ -1,9 +1,11 @@
 const fs = require('fs');
 
-fs.readFile('./input.txt', 'utf8', (err, fileContent) => {
+const handleFile = (err, fileContent) => {
   if (err) {
     console.log('Error:', err);
   } else {
     console.log(fileContent);
   }
-});
+};
+
+fs.readFile('./input.txt', 'utf8', handleFile);
