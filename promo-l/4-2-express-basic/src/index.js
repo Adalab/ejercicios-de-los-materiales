@@ -5,7 +5,7 @@ const cors = require('cors');
 const server = express();
 
 // set express middleware
-//   we must always put this line, until we know what they do
+//   we must always put these lines, until we know what they do
 //   more info: https://expressjs.com/es/guide/using-middleware.html
 server.use(cors());
 server.use(express.json());
@@ -24,7 +24,6 @@ server.use(express.static(staticServerPath));
 
 // API request > GET > http://localhost:3000/users
 server.get('/users', (req, res) => {
-  // send response
   const response = {
     users: [{ name: 'Sofía' }, { name: 'María' }]
   };
@@ -35,8 +34,6 @@ server.get('/users', (req, res) => {
 server.post('/new-user', (req, res) => {
   // console request body params
   console.log(`Creating the user in database with user name: "${req.body.userName}"`);
-
-  // send response
   const response = {
     result: `User created: ${req.body.userName}`
   };
