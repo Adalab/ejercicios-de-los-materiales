@@ -1,11 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 
-// create app server
+// create server
 const server = express();
 
 // set express middleware
 //   we must always put this line, until we know what they do
 //   more info: https://expressjs.com/es/guide/using-middleware.html
+server.use(cors());
 server.use(express.json());
 
 // init express aplication
