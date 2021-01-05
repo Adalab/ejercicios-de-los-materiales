@@ -1,14 +1,3 @@
-// get root data
-
-document.querySelector('.js-btn-get-root').addEventListener('click', () => {
-  fetch('http://localhost:3000/')
-    .then(response => response.json())
-    .then(responseData => {
-      console.log('Data:', responseData);
-      printJson('.js-get-root-result', responseData);
-    });
-});
-
 // get users data
 
 document.querySelector('.js-btn-get-users').addEventListener('click', () => {
