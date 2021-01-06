@@ -6,10 +6,19 @@ document.querySelector('.js-btn-post-new-user').addEventListener('click', () => 
   const inputName = document.querySelector('.js-input-name');
   const inputEmail = document.querySelector('.js-input-email');
 
-  // create query params
-  const queryParams = `?userName=${inputName.value}&userEmail=${inputEmail.value}`;
+  // create body params
+  const bodyParams = {
+    userName: inputName.value,
+    userEmail: inputEmail.value
+  };
 
-  fetch('http://localhost:3000/user' + queryParams, { method: 'POST' })
+  fetch('http://localhost:3000/user', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(bodyParams)
+  })
     .then(response => response.json())
     .then(responseData => {
       console.log('Server response:', responseData);
