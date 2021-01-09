@@ -12,6 +12,11 @@
   font-weight: 700;
 }
 
+.menu-item {
+  display: inline-block;
+  padding: 0 25px;
+}
+
 .rotate {
   animation-name: rotate;
   animation-timing-function: ease-in-out;

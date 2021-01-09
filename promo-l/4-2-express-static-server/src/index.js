@@ -21,7 +21,7 @@ app.use(express.static(staticServerPath));
 
 // not found error
 app.get('*', (req, res) => {
-  const notFoundFileRelativePath = '../public/404.html'; // relative to this directory
+  const notFoundFileRelativePath = '../public/404-not-found.html'; // relative to this directory
   const notFoundFileAbsolutePath = path.join(__dirname, notFoundFileRelativePath);
   res.status(404).sendFile(notFoundFileAbsolutePath);
 });
