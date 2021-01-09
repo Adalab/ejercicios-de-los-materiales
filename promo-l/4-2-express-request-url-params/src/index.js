@@ -17,6 +17,21 @@ app.listen(serverPort, () => {
 
 // api endpoints
 
+// app.get('/promos/id-a', (req, res) => {
+//   const promo = promos.find(promo => promo.id === 'id-a');
+//   res.json(promo);
+// });
+
+// app.get('/promos/id-b', (req, res) => {
+//   const promo = promos.find(promo => promo.id === 'id-b');
+//   res.json(promo);
+// });
+
+// app.get('/promos/id-c', (req, res) => {
+//   const promo = promos.find(promo => promo.id === 'id-c');
+//   res.json(promo);
+// });
+
 app.get('/promos/all', (req, res) => {
   res.json(promos);
 });
@@ -36,7 +51,3 @@ app.get('/promos/:promoId', (req, res) => {
     res.json(promo);
   }
 });
-
-// express static server
-
-app.use(express.static('./public'));
