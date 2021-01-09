@@ -53,14 +53,14 @@ app.get('/response-with-html', (req, res) => {
 
 app.get('/response-with-404-status-error', (req, res) => {
   // more info about http status codes: https://developer.mozilla.org/es/docs/Web/HTTP/Status
-  // res.status(404).json({
-  //   errorCode: 'data-not-found',
-  //   errorMessage: 'Data not found'
-  // });
-  // another way to do it is:
-  res.status(404);
-  res.json({
+  res.status(404).json({
     errorCode: 'data-not-found',
     errorMessage: 'Data not found'
   });
+  // another way to do it is:
+  // res.status(404);
+  // res.json({
+  //   errorCode: 'data-not-found',
+  //   errorMessage: 'Data not found'
+  // });
 });
