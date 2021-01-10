@@ -1,0 +1,37 @@
+[
+  {
+    "id": "942734",
+    "title": "Te doy mis ojos",
+    "year": "2003",
+    "director": "Icíar Bollaín",
+    "country": "España",
+    "awards": [
+      {
+        "year": "2003",
+        "info": "Festival de San Sebastián: Concha de Plata mejor actor (Tosar) y actriz (Marull)"
+      },
+      {
+        "year": "2003",
+        "info": "7 Premios Goya: incluyendo Mejor película, dirección, actriz y actor"
+      },
+      {
+        "year": "2003",
+        "info": "Premios Forqué: Mejor película"
+      },
+      {
+        "year": "2004",
+        "info": "Premios Ariel: Nominada a Mejor película iberoamericana"
+      },
+      {
+        "year": "2004",
+        "info": "Premios del Cine Europeo: 2 nominaciones"
+      }
+    ]
+  },
+  {
+    "id": "999902",
+    "title": "El perro del hortelano",
+    "year": "1996",
+    "director": "Pilar Miró"
+  }
+]

@@ -3,7 +3,6 @@
 const math = require('./math');
 
 const result = math.add(1, 2);
-
 console.log(`La suma de 1 + 3 es ${result}`);
 
 // Example 2
@@ -20,6 +19,6 @@ console.log(`Los números aleatorios son`, numbers);
 // Example 3
 
 setInterval(() => {
-  const date = new Date()
+  const date = new Date();
   console.log(`La fecha actual es ${date}`);
-}, 1000)
+}, 1000);
