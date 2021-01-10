@@ -36,6 +36,6 @@ app.get('/es/film:filmId.html', (req, res) => {
   if (filmData) {
     res.render('pages/film', filmData);
   } else {
-    res.status(404).render('pages/film-not-found');
+    res.render('pages/film-not-found');
   }
 });

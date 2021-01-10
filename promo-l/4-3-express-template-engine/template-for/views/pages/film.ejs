@@ -17,15 +17,14 @@
       <li>Título original: <%= title %></li>
       <li>Año: <%= year %></li>
       <li>Directora: <%= director %></li>
-
       <% if (country !== "") { %>
-      <li>Páis: <%= country %></li>
+      <li>País: <%= country %></li>
       <% } %> <% if (awards.length > 0) { %>
       <li>
         Premios:
         <ul class="ml-1">
           <% awards.forEach(function(award) { %>
-          <li><%= award.year %>: <%= award.info %></li>
+          <li><%= award.year %>: <%= award.info %>.</li>
           <% }) %>
         </ul>
       </li>

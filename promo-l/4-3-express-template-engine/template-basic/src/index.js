@@ -26,5 +26,9 @@ app.get('/es/film:filmId.html', (req, res) => {
   console.log('film data', filmData);
 
   // response with rendered template
-  res.render('pages/film', filmData);
+  if (filmData) {
+    res.render('pages/film', filmData);
+  } else {
+    res.render('pages/film-not-found');
+  }
 });
