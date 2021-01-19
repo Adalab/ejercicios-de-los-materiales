@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "email": "dayana@adalab.es",
+    "password": "f023d09fa"
+  },
+  {
+    "id": "2",
+    "email": "ivan@adalab.es",
+    "password": "0234mdlif"
+  },
+  {
+    "id": "3",
+    "email": "miguel@adalab.es",
+    "password": "12345678"
+  }
+]
