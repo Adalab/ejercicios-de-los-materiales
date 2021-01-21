@@ -13,6 +13,7 @@ const App = () => {
   // state
   const localStorageUser = localStorage.get('user');
   const [userId, setUserId] = useState(localStorageUser.userId || '');
+  const [loginError, setLoginError] = useState('');
   const [shopProducts, setShopProducts] = useState([]);
   const [cartProducts, setCartProducts] = useState([]);
   const [filterText, setFilterText] = useState('');
@@ -31,8 +32,15 @@ const App = () => {
   // events
   const handleLogin = data => {
     api.sendLogin(data).then(data => {
-      setUserId(data.userId);
-      localStorage.set('user', data);
+      console.log(data);
+
+      if (data.error) {
+        setLoginError(data.message);
+      } else {
+        setLoginError('');
+        setUserId(data.userId);
+        localStorage.set('user', data);
+      }
     });
   };
 
@@ -58,7 +66,7 @@ const App = () => {
   // render
 
   const renderLogin = () => {
-    return <Login handleLogin={handleLogin} />;
+    return <Login loginError={loginError} handleLogin={handleLogin} />;
   };
 
   const renderShop = () => {

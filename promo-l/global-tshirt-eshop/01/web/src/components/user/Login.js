@@ -48,6 +48,7 @@ const Login = props => {
         onChange={handlePassword}
       />
       <button className="card__btn m-0 mt-1">Entrar</button>
+      {props.loginError}
     </form>
   );
 };
