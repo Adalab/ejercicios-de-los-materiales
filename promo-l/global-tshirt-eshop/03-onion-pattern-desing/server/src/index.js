@@ -3,15 +3,8 @@ const express = require('express');
 const apiCarts = require('./api/carts');
 const apiProducts = require('./api/products');
 const apiUsers = require('./api/users');
-const data = require('./data/');
 
 console.clear();
-
-// DATA BASE
-
-data.init();
-
-// SERVER
 
 // config server
 const app = express();

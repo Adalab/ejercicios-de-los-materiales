@@ -1,37 +1,17 @@
 // this file knows what the data is like
 // this file requests the data from the json files
+const usersData = require('./users.json');
 
-// const usersData = require('./users.json');
-const data = require('.');
-
-// const isValidUserId = userId => {
-//   return !!usersData.find(user => user.id === userId);
-// };
-
-const isValidUserId = id => {
-  const stmt = data.db.prepare('SELECT * FROM users WHERE id= ?');
-  const user = stmt.get(id);
-  return user === undefined ? false : true;
+const isValidUserId = userId => {
+  return !!usersData.find(user => user.id === userId);
 };
 
-// const getUserById = id => {
-//   return usersData.find(user => user.id === req.query.userId);
-// };
-
-const getUserById = id => {
-  const stmt = data.db.prepare('SELECT * FROM users WHERE id= ?');
-  const user = stmt.get(id);
-  return user;
+const getUserById = userId => {
+  return usersData.find(user => user.id === userId);
 };
-
-// const getUserByEmailAndPassword = (email, password) => {
-//   return usersData.find(user => user.email === email && user.password === password);
-// };
 
 const getUserByEmailAndPassword = (email, password) => {
-  const stmt = data.db.prepare('SELECT * FROM users WHERE email= ? AND password= ?');
-  const user = stmt.get(email, password);
-  return user;
+  return usersData.find(user => user.email === email && user.password === password);
 };
 
 module.exports = {
