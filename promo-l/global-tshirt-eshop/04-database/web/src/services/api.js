@@ -1,4 +1,5 @@
-const apiBaseUrl = '//localhost:3000/api';
+const isDevEnviroment = process.env.NODE_ENV === 'development';
+const apiBaseUrl = isDevEnviroment ? '//localhost:3000/api' : './api';
 
 // login / logout
 
@@ -6,7 +7,7 @@ const getUser = userId => {
   return fetch(`${apiBaseUrl}/user?userId=${userId}`)
     .then(response => response.json())
     .then(data => data.user);
-}
+};
 
 const sendLogin = userData => {
   return fetch(`${apiBaseUrl}/login`, {
@@ -14,7 +15,6 @@ const sendLogin = userData => {
     body: JSON.stringify(userData),
     headers: { 'Content-Type': 'application/json' }
   }).then(response => response.json());
-
 };
 
 // products
