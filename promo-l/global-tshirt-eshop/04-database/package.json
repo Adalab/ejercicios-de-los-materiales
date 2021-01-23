@@ -1,0 +1,9 @@
+{
+  "name": "02",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "cd web && npm run build && rm -rf ../server/public && mv build ../server/public && cd ../server && npm start",
+    "dev": "cd server && npm run dev & cd web && npm start",
+    "install": "cd server && rm -rf node_modules/ && npm install && cd ../web && rm -rf node_modules/ && npm install"
+  }
+}
