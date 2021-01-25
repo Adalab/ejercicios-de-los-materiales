@@ -12,7 +12,7 @@ const getProducts = () => {
   const stmt = data.db.prepare('SELECT * FROM products');
   const products = stmt.all();
   return products.map(product => {
-    // los ids deben ser un string
+    // ids must be a string
     product.id = product.id + '';
     return product;
   });

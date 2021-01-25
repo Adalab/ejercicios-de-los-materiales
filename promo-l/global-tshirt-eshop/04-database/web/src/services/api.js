@@ -1,3 +1,4 @@
+// enviroment variables: more info at https://create-react-app.dev/docs/adding-custom-environment-variables/
 const isDevEnviroment = process.env.NODE_ENV === 'development';
 const apiBaseUrl = isDevEnviroment ? '//localhost:3000/api' : './api';
 

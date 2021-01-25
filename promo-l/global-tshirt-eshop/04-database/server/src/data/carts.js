@@ -18,7 +18,7 @@ const getCartByUserId = userId => {
   const cartProducts = stmt.all(userId);
   return cartProducts.map(cartProduct => {
     return {
-      // los ids deben ser un string
+      // ids must be a string
       id: cartProduct.productId + '',
       units: cartProduct.units
     };
