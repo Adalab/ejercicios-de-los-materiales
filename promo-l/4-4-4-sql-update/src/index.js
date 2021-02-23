@@ -23,13 +23,13 @@ const db = new Database('./src/database.db', {
 
 // api endpoints
 
-app.patch('/update', (req, res) => {
+app.patch('/users', (req, res) => {
   const query = db.prepare(`UPDATE users SET email = ?, password = ? WHERE id = ?`);
   const result = query.run('sofia.garcia@yahoo.com', 'abcdefgh', 3);
   res.json(result);
 });
 
-app.patch('/update', (req, res) => {
+app.patch('/users-with-body-params', (req, res) => {
   const query = db.prepare(`UPDATE users SET email = ?, password = ? WHERE id = ?`);
   const result = query.run(req.body.email, req.body.password, req.body.id);
   res.json(result);
