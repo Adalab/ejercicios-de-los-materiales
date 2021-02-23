@@ -35,39 +35,9 @@ app.get('/all-users/all-fields', (req, res) => {
   res.json(users);
 });
 
-app.get('/users-great-or-equal-than-id-2/all-fields', (req, res) => {
-  const query = db.prepare(`SELECT * FROM users WHERE id >= ?`);
-  const users = query.all(2);
-  res.json(users);
-});
-
-app.get('/all-users/all-fields/order-by-name-by-default', (req, res) => {
-  const query = db.prepare(`SELECT * FROM users ORDER BY name`);
-  const users = query.all();
-  res.json(users);
-});
-
-app.get('/all-users/all-fields/order-by-name-asc', (req, res) => {
-  const query = db.prepare(`SELECT * FROM users ORDER BY name ASC`);
-  const users = query.all();
-  res.json(users);
-});
-
-app.get('/all-users/all-fields/order-by-name-des', (req, res) => {
-  const query = db.prepare(`SELECT * FROM users ORDER BY name DESC`);
-  const users = query.all();
-  res.json(users);
-});
-
-app.get('/all-users/all-fields/limit-2', (req, res) => {
-  const query = db.prepare(`SELECT * FROM users LIMIT 2`);
-  const users = query.all();
-  res.json(users);
-});
-
-app.get('/users-great-or-equal-than-id-2/all-fields/limit-2', (req, res) => {
-  const query = db.prepare(`SELECT * FROM users WHERE id >= ? LIMIT 2`);
-  const users = query.all(2);
+app.get('/all-users-with-id-great-than-5/all-fields', (req, res) => {
+  const query = db.prepare(`SELECT * FROM users WHERE id > ?`);
+  const users = query.all(5);
   res.json(users);
 });
 
@@ -77,8 +47,20 @@ app.get('/user-2/all-fields', (req, res) => {
   res.json(user);
 });
 
-app.get('/user-2/id-and-email', (req, res) => {
-  const query = db.prepare(`SELECT id, email FROM users WHERE id = ?`);
-  const user = query.get(2);
-  res.json(user);
+app.get('/users-with-id-in-query-params/all-fields', (req, res) => {
+  const query = db.prepare(`SELECT * FROM users WHERE id = ?`);
+  const users = query.get(req.query.userId);
+  res.json(users);
+});
+
+app.get('/all-users-with-email-and-password/all-fields', (req, res) => {
+  const query = db.prepare(`SELECT * FROM users WHERE email = ? AND password = ?`);
+  const users = query.get('tania@gmail.com', 'adfs089df');
+  res.json(users);
+});
+
+app.get('/all-users-with-email-and-password-in-query-params/all-fields', (req, res) => {
+  const query = db.prepare(`SELECT * FROM users WHERE email = ? AND password = ?`);
+  const users = query.get(req.query.email, req.query.password);
+  res.json(users);
 });
