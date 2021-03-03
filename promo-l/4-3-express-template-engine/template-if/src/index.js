@@ -25,14 +25,13 @@ app.get('/es/film:filmId.html', (req, res) => {
   const filmData = films.find(film => film.id === req.params.filmId);
   console.log('film data', filmData);
 
-  // ensure data
-  filmData.title = filmData.title || '';
-  filmData.year = filmData.year || '';
-  filmData.director = filmData.director || '';
-  filmData.country = filmData.country || '';
-
   // response with rendered template
   if (filmData) {
+    // ensure data
+    filmData.title = filmData.title || '';
+    filmData.year = filmData.year || '';
+    filmData.director = filmData.director || '';
+    filmData.country = filmData.country || '';
     res.render('pages/film', filmData);
   } else {
     res.render('pages/film-not-found');
