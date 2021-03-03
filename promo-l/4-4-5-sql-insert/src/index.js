@@ -25,12 +25,15 @@ const db = new Database('./src/database.db', {
 
 app.post('/insert', (req, res) => {
   const query = db.prepare(`INSERT INTO users (email, password) VALUES (?, ?)`);
-  const result = query.run('celia@gmail.com', 'asdf');
+  const result = query.run('celia@gmail.com', 'fasfasdfsd');
   res.json(result);
 });
 
-app.post('/post-with-body-params', (req, res) => {
-  const query = db.prepare(`INSERT INTO users (email, password) VALUES (?, ?)`);
-  const result = query.run(req.body.email, req.body.password);
-  res.json(result);
+app.post('/insert-with-body-params', (req, res) => {
+  const query = db.prepare(`INSERT INTO users (email, password, name) VALUES (?, ?, ?)`);
+  const result = query.run(req.body.email, req.body.password, req.body.name);
+  res.json({
+    result: 'User created',
+    userId: result.lastInsertRowid
+  });
 });
