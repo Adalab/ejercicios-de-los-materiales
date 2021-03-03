@@ -23,8 +23,14 @@ const db = new Database('./src/database.db', {
 
 // api endpoints
 
-app.get('/insert-into', (req, res) => {
+app.post('/insert', (req, res) => {
   const query = db.prepare(`INSERT INTO users (email, password) VALUES (?, ?)`);
   const result = query.run('celia@gmail.com', 'asdf');
+  res.json(result);
+});
+
+app.post('/post-with-body-params', (req, res) => {
+  const query = db.prepare(`INSERT INTO users (email, password) VALUES (?, ?)`);
+  const result = query.run(req.body.email, req.body.password);
   res.json(result);
 });
