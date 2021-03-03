@@ -23,8 +23,23 @@ const db = new Database('./src/database.db', {
 
 // api endpoints
 
-app.get('/insert-into', (req, res) => {
+app.delete('/delete', (req, res) => {
   const query = db.prepare(`DELETE FROM users WHERE id = ?`);
-  const result = query.run(3);
+  const result = query.run(5);
   res.json(result);
+});
+
+app.delete('/delete-with-body-params', (req, res) => {
+  const query = db.prepare(`DELETE FROM users WHERE id = ?`);
+  const result = query.run(req.body.id);
+  console.log(result);
+  if (result.changes === 1) {
+    res.json({
+      result: 'User deleted'
+    });
+  } else {
+    res.status(404).json({
+      result: 'User not found'
+    });
+  }
 });
