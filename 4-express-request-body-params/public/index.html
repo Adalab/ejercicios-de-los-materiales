@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://beta.adalab.es/resources/stylesheets/all.css" />
+    <title>Express</title>
+  </head>
+  <body class="page">
+    <header>
+      <h1>Express: Request query params</h1>
+    </header>
+
+    <main>
+      <form>
+        <div class="border--medium">
+          <label>
+            Escribe algo en este nombre
+            <input type="text" class="js-input-name form__input-text" value="Maricarmen" />
+            y en este email
+            <input type="text" class="js-input-email form__input-text" value="mari@gmail.com" />
+            y pulsa en
+          </label>
+          <input type="button" class="js-btn-post-new-user form__btn" value="enviar" />
+          <pre class="js-post-new-user-result text--code"></pre>
+        </div>
+
+        <div class="border--medium">
+          <label>
+            Pulsa <input type="button" class="js-btn-get-users form__btn" value="aquí" /> para
+            obtener los usuarios:
+          </label>
+          <pre class="js-get-users-result text--code"></pre>
+        </div>
+      </form>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
