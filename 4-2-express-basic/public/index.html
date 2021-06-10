@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://beta.adalab.es/resources/stylesheets/all.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Express basic</title>
+  </head>
+  <body class="page">
+    <header>
+      <h1>
+        <img src="./images/logo.png" alt="Adalab" class="logo" />
+        Express básico:
+      </h1>
+      <h2>Abre devtools &gt; network y...</h2>
+    </header>
+
+    <main>
+      <form>
+        <div class="border--medium">
+          <label>Pulsa aquí para</label>
+          <input
+            type="button"
+            class="js-btn-get-users form__btn"
+            value="enviar una petición GET a http://localhost:3000/users"
+          />
+          <pre class="js-get-users-result text--code"></pre>
+        </div>
+
+        <div class="border--medium">
+          <label>
+            Escribe el nombre de la usuaria a crear aquí
+            <input type="text" class="js-username form__input-text" />
+            y pulsa en
+          </label>
+          <input
+            type="button"
+            class="js-btn-post-new-user form__btn"
+            value="enviar una petición POST a http://localhost:3000/new-user"
+          />
+          <pre class="js-get-post-new-user-result text--code"></pre>
+        </div>
+      </form>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
