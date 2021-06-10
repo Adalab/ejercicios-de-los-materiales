@@ -1,0 +1,14 @@
+{
+  "name": "adalab-project",
+  "version": "1.0.0",
+  "description": "Adalab project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adalab",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}
