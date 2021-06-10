@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://beta.adalab.es/resources/stylesheets/all.css" />
+    <title><%= title %> (<%= year %>) - FilmAffinity</title>
+  </head>
+  <body class="page">
+    <%- include('../partials/header'); %>
+
+    <h1 class="mb-1 title--big"><%= title %></h1>
+
+    <h2 class="mb-1">Ficha</h2>
+
+    <ul class="ml-1">
+      <li>Título original: <%= title %></li>
+      <li>Año: <%= year %></li>
+      <li>Directora: <%= director %></li>
+      <% if (country !== "") { %>
+      <li>País: <%= country %></li>
+      <% } %>
+    </ul>
+
+    <%- include('../partials/footer'); %>
+  </body>
+</html>
