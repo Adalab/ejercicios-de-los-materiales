@@ -5,6 +5,8 @@ const sendLoginToApi = data => {
   return fetch('//beta.adalab.es/ejercicios-extra/api/fake/empty.json')
     .then(response => response.json())
     .then(() => {
+      // estos son datos fake
+      // solo son válidos los emails de gmail
       if (data.email.includes('gmail')) {
         return {
           success: true,
@@ -35,8 +37,8 @@ const sendSingUpToApi = data => {
 
 // profile
 
-const sendProfileToApi = data => {
-  console.log('Se están enviando datos al profile:', data);
+const sendProfileToApi = (userId, data) => {
+  console.log('Se están enviando datos al profile:', userId, data);
   return fetch('//beta.adalab.es/ejercicios-extra/api/fake/empty.json');
 };
 

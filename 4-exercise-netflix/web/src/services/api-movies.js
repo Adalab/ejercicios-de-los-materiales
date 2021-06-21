@@ -1,8 +1,8 @@
 // login
 
-const getMoviesFromApi = params => {
-  console.log('Se están las películas de la app');
-  return fetch(`//localhost:4000/movies?sort=${params.sort}&gender=${params.gender}`)
+const getMoviesFromApi = () => {
+  console.log('Se están pidiendo las películas de la app');
+  return fetch('//beta.adalab.es/ejercicios-extra/api/fake/empty.json')
     .then(response => response.json())
     .then(() => {
       return {

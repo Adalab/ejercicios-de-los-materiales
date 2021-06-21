@@ -16,12 +16,17 @@ const SignUp = props => {
 
   const handleForm = ev => {
     ev.preventDefault();
-    props.sendSingUpToApi({ email: email, password: password });
+    // enviamos los datos a App y este al API
+    props.sendSingUpToApi({
+      email: email,
+      password: password
+    });
   };
 
   // render
 
   const renderErrorMessage = () => {
+    // Si el API ha devuelto un error, APP lo guarda en el estado y nos lo pasa
     if (props.signUpErrorMessage !== '') {
       return (
         <p className="border--medium border--warning mt-1">
@@ -46,6 +51,7 @@ const SignUp = props => {
           value={email}
           onChange={handleEmail}
         />
+
         <label className="form__label display-block" htmlFor="password">
           Escribe tu contraseña
         </label>
@@ -57,7 +63,9 @@ const SignUp = props => {
           value={password}
           onChange={handlePassword}
         />
+
         <input className="form__btn display-block" type="submit" value="Registrar" />
+
         {renderErrorMessage()}
       </form>
     </section>

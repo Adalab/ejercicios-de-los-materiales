@@ -12,7 +12,7 @@ const AllMovies = props => {
 
   return (
     <section className="border--medium">
-      <h1 className="title--medium">Estas son todas nuestras películas</h1>
+      <h1 className="title--medium">Estas son todas las películas de nuestro catálogo</h1>
       <form className="movies__filters">
         <div className="movies__filters--gender">
           <label htmlFor="filterGender">Filtrar por género</label>
@@ -31,7 +31,7 @@ const AllMovies = props => {
 
         <div className="movies__filters--sort">
           <label>
-            Ordernar: Ascendente
+            Ordernar: A-Z
             <input
               className="movies__radio"
               type="radio"
@@ -41,8 +41,9 @@ const AllMovies = props => {
               onChange={handleOptions}
             />
           </label>
+
           <label>
-            Descendente
+            Z-A
             <input
               className="movies__radio"
               type="radio"

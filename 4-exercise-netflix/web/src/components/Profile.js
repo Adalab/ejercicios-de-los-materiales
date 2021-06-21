@@ -21,7 +21,12 @@ const Profile = props => {
 
   const handleForm = ev => {
     ev.preventDefault();
-    props.sendProfileToApi({ name: name, email: email, password: password });
+    // enviamos los datos a App y este al API
+    props.sendProfileToApi({
+      name: name,
+      email: email,
+      password: password
+    });
   };
 
   // render
@@ -41,6 +46,7 @@ const Profile = props => {
           value={name}
           onChange={handleName}
         />
+
         <label className="form__label display-block" htmlFor="email">
           Mi email
         </label>
@@ -52,6 +58,7 @@ const Profile = props => {
           value={email}
           onChange={handleEmail}
         />
+
         <label className="form__label display-block" htmlFor="password">
           Mi contraseña
         </label>
@@ -63,6 +70,7 @@ const Profile = props => {
           value={password}
           onChange={handlePassword}
         />
+
         <input className="form__btn display-block" type="submit" value="Guardar" />
       </form>
     </section>

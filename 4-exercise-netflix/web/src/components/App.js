@@ -29,9 +29,9 @@ const App = () => {
   const [allMoviesOptionSort, setAllMoviesOptionSort] = useState('asc');
 
   /*
-  useEffect: get movies
-  Con este effect pedimos las películas al servidor.
+  useEffect: obtener las películas del API.
   Se ejecuta cuando allMoviesOptionGender o allMoviesOptionSort cambian de valor.
+  Como queremos que el back devuelva las películas filtradas por género y ordenadas por nombre estamos pasando a getMoviesFromApi estos dos valores.
   */
   useEffect(() => {
     const params = {
@@ -43,6 +43,11 @@ const App = () => {
     });
   }, [allMoviesOptionGender, allMoviesOptionSort]);
 
+  /*
+  useEffect: obtener el perfil de la usuaria.
+  Se ejecuta cuando userId cambian de valor, es decir, cuando pasa de un string vacío a un strin relleno con el id de la usuaria.
+  Como queremos que el back devuelva los datos de una usuaria getProfileFromApi recibe el userId.
+  */
   useEffect(() => {
     if (userId !== '') {
       apiUser.getProfileFromApi(userId).then(response => {
@@ -50,47 +55,87 @@ const App = () => {
         setUserEmail(response.email);
         setUserPassword(response.password);
       });
+    }
+  }, [userId]);
+
+  /*
+  useEffect: obtener las películas de la usuaria.
+  Se ejecuta cuando userId cambian de valor, es decir, cuando pasa de un string vacío a un strin relleno con el id de la usuaria.
+  Como queremos que el back devuelva las películas de una usuaria getUserMoviesFromApi recibe el userId.
+  */
+  useEffect(() => {
+    if (userId !== '') {
       apiUser.getUserMoviesFromApi(userId).then(response => {
         setUserMovies(response.movies);
       });
     }
   }, [userId]);
 
-  // events
-
-  const sendLoginToApi = data => {
-    apiUser.sendLoginToApi(data).then(response => {
+  /*
+  Event: enviar datos del login al API.
+  Con este evento enviamos los datos del login al servidor cuando la usuaria lanza el evento.
+  Como queremos que el back devuelva el id de la usuaria sendLoginToApi recibe el email y la contraseña que ella haya escrito.
+  */
+  const sendLoginToApi = loginData => {
+    // limpiamos el error antes de enviar los datos al API
+    setLoginErrorMessage('');
+    apiUser.sendLoginToApi(loginData).then(response => {
       if (response.success === true) {
         setUserId(response.userId);
-        setLoginErrorMessage('');
+        // Si la usuaria introduce bien sus datos redireccionamos desde la página de login al inicio de la página
         router.redirect('/');
       } else {
+        // Si la usuaria introduce mal sus datos guardamos el error que nos devuelve el API para que se pinte en la página
         setLoginErrorMessage(response.errorMessage);
       }
     });
   };
 
+  /*
+  Event: enviar datos del sign up al API.
+  Con este evento enviamos los datos del sign up al servidor cuando la usuaria lanza el evento.
+  Como queremos que el back devuelva el id de la usuaria sendSingUpToApi recibe el email y la contraseña que ella haya escrito.
+  */
   const sendSingUpToApi = data => {
+    // limpiamos el error antes de enviar los datos al API
+    setSignUpErrorMessage('');
     apiUser.sendSingUpToApi(data).then(response => {
       if (response.success === true) {
         setUserId(response.userId);
-        setSignUpErrorMessage('');
+        // Si la usuaria introduce bien sus datos redireccionamos desde la página de signup al inicio de la página
         router.redirect('/');
       } else {
+        // Si la usuaria introduce mal sus datos guardamos el error que nos devuelve el API para que se pinte en la página
         setSignUpErrorMessage(response.errorMessage);
       }
     });
   };
 
-  const sendProfileToApi = data => {
-    apiUser.sendProfileToApi(data);
+  /*
+  Event: enviar datos del profile al API.
+  Con este evento enviamos los datos del profile al servidor cuando la usuaria lanza el evento.
+  Le tenemos que indicar qué datos (nombre, email y contraseña) queremos enviar al API.
+  También le tenemos que indicar cuál es la usuaria actual, por ello enviamos el userId
+  */
+  const sendProfileToApi = (userId, data) => {
+    apiUser.sendProfileToApi(userId, data);
   };
 
+  /*
+  Event: cerrar sesión.
+  Redireccionamos al inicio de la página.
+  Recargamos la página para que se borren todos los datos del estado de React.
+  */
   const logout = () => {
     router.redirect('/');
     router.reload();
   };
 
+  /*
+  Event: actualizar el género y la ordenación.
+  Aquí solo guardamos los datos en el estado.
+  En el primer useEffect le decimos que cuando estos datos cambien vuelva a pedir las películas al API.
+  */
   const handleAllMoviesOptions = data => {
     if (data.key === 'gender') {
       setAllMoviesOptionGender(data.value);
@@ -99,8 +144,13 @@ const App = () => {
     }
   };
 
+  // render
+
   return (
     <>
+      {/* Le paso Header un booleano indicando si la usuaria está o no logada.
+      No es necesario pasarle el userId, no necesita saberlo, le basta con saber si está logada o no.
+      De esta forma Header maneja datos más simples y solo los que necesita. Queremos que Header sea lo más simple posible. */}
       <Header isUserLogged={!!userId} logout={logout} />
       <Switch>
         <Route exact path="/">
