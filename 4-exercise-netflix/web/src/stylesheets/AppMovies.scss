@@ -1,0 +1,13 @@
+.movies__filters {
+  display: flex;
+  align-items: center;
+
+  > * {
+    width: 50%;
+  }
+}
+
+.movies__radio {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
