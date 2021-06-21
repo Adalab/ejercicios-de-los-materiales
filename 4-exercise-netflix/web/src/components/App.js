@@ -13,26 +13,35 @@ import apiUser from '../services/api-user';
 import router from '../services/router';
 
 const App = () => {
-  // state
-
-  const [appMovies, setAppMovies] = useState([]);
+  // state: user
   const [userId, setUserId] = useState('');
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [userMovies, setUserMovies] = useState([]);
+  // state: login
   const [loginErrorMessage, setLoginErrorMessage] = useState('');
+  // state: sign up
   const [signUpErrorMessage, setSignUpErrorMessage] = useState('');
+  // state: movies
+  const [appMovies, setAppMovies] = useState([]);
   const [allMoviesOptionGender, setAllMoviesOptionGender] = useState('');
   const [allMoviesOptionSort, setAllMoviesOptionSort] = useState('asc');
 
-  // effects
-
+  /*
+  useEffect: get movies
+  Con este effect pedimos las películas al servidor.
+  Se ejecuta cuando allMoviesOptionGender o allMoviesOptionSort cambian de valor.
+  */
   useEffect(() => {
-    apiMovies.getMoviesFromApi().then(response => {
+    const params = {
+      gender: allMoviesOptionGender,
+      sort: allMoviesOptionSort
+    };
+    apiMovies.getMoviesFromApi(params).then(response => {
       setAppMovies(response.movies);
     });
-  }, []);
+  }, [allMoviesOptionGender, allMoviesOptionSort]);
 
   useEffect(() => {
     if (userId !== '') {
