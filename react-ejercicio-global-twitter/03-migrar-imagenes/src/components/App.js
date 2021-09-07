@@ -1,4 +1,6 @@
 import '../styles/App.css';
+import adalabBanner from '../images/adalab-banner.jpg';
+import adalabLogo from '../images/adalab-logo.png';
 
 function App() {
   return (
@@ -7,31 +9,31 @@ function App() {
         <nav className="menu">
           <ul className="menu__items">
             <li className="menu__item menu__item--twitter">
-              <a className="menu__link" href="#" title="Ir">
+              <a className="menu__link" href="/home" title="Ir al inicio">
                 <span className="text">Ir al inicio</span>
               </a>
             </li>
 
             <li className="menu__item menu__item--home">
-              <a className="menu__link" href="#" title="Ir">
+              <a className="menu__link" href="/home" title="Ir al inicio">
                 <span className="text">Ir al inicio</span>
               </a>
             </li>
 
             <li className="menu__item menu__item--search">
-              <a className="menu__link" href="#" title="Buscar">
+              <a className="menu__link" href="/search" title="Buscar">
                 <span className="text">Buscar</span>
               </a>
             </li>
 
             <li className="menu__item menu__item--profile">
-              <a className="menu__link" href="#" title="Perfil">
+              <a className="menu__link" href="/profile" title="Perfil">
                 <span className="text">Perfil</span>
               </a>
             </li>
 
             <li className="menu__item menu__item--tweet">
-              <a className="menu__link" href="#" title="Twittear">
+              <a className="menu__link" href="/compose/tweet" title="Twittear">
                 <span className="text">Twittear</span>
               </a>
             </li>
@@ -47,11 +49,11 @@ function App() {
               <span className="header__tweets">6.762 Tweets</span>
             </h1>
 
-            <img src="./assets/images/adalab-banner.jpg" alt="Banner de Adalab" />
+            <img src={adalabBanner} alt="Banner de Adalab" />
 
             <div className="header__content">
               <div className="header__profile-image">
-                <img src="./assets/images/adalab-logo.png" alt="Imagen de perfil de Adalab" />
+                <img src={adalabLogo} alt="Imagen de perfil de Adalab" />
               </div>
 
               <div className="header__actions">
