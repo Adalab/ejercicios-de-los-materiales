@@ -30,24 +30,24 @@
   }
 
   &__item--twitter .menu__link {
-    background-image: url('../images/icon-twitter.png');
+    background-image: url('../../images/icon-twitter.png');
   }
 
   &__item--home .menu__link {
-    background-image: url('../images/icon-home.png');
+    background-image: url('../../images/icon-home.png');
   }
 
   &__item--search .menu__link {
-    background-image: url('../images/icon-search.png');
+    background-image: url('../../images/icon-search.png');
   }
 
   &__item--profile .menu__link {
-    background-image: url('../images/icon-profile.png');
+    background-image: url('../../images/icon-profile.png');
   }
 
   &__item--tweet .menu__link {
     margin-top: 0.5rem;
-    background-image: url('../images/icon-feather.png');
+    background-image: url('../../images/icon-feather.png');
     background-color: $color-blue-dark;
 
     &:hover {
