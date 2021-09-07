@@ -47,8 +47,10 @@
 
   &__item--tweet .menu__link {
     margin-top: 0.5rem;
+    width: 3rem;
     background-image: url('../../images/icon-feather.png');
     background-color: $color-blue-dark;
+    border: none;
 
     &:hover {
       background-color: $color-blue-dark-hover;
