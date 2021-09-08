@@ -1,0 +1,57 @@
+[
+  {
+    "id": "0as8fdsdf",
+    "avatar": "http://localhost:3000/assets/avatars/user-4.jpg",
+    "user": "Concha Asensio",
+    "username": "conchaasensio",
+    "date": "3 sep. 2021",
+    "text": "No desesperes, que llegará. A mi click le costó... yo pensé que no llegaría nunca, pero lo hizo 😉 ¡Ánimo! 💪",
+    "comments": 1,
+    "retweets": 3,
+    "likes": 13
+  },
+  {
+    "id": "234fsadf",
+    "avatar": "http://localhost:3000/assets/avatars/user-5.jpg",
+    "user": "Marina",
+    "username": "synergiacolec",
+    "date": "1 abr. 2021",
+    "text": "Luke, yo soy tu padre. Mira a ver esta espada láser que no me funciona y yo no he tocado nada.",
+    "comments": 4,
+    "retweets": 7,
+    "likes": 2
+  },
+  {
+    "id": "af23weasd",
+    "avatar": "http://localhost:3000/assets/avatars/user-1.jpg",
+    "user": "Noelia Luque",
+    "username": "nlsabariego",
+    "date": "26 nov. 2020",
+    "text": "Queremos que nos den JS en potitos #oidoenadalab",
+    "comments": 1,
+    "tweets": 3,
+    "likes": 13
+  },
+  {
+    "id": "asfas",
+    "avatar": "http://localhost:3000/assets/avatars/user-3.jpg",
+    "user": "Beatriz Sobrino",
+    "username": "Beatrizsobri",
+    "date": "27 ene. 2020",
+    "text": "Yo antes de Adalab era tecnoplégica #oidoenadalab",
+    "comments": 2,
+    "tweets": 2,
+    "likes": 5
+  },
+  {
+    "id": "asfd",
+    "avatar": "http://localhost:3000/assets/avatars/user-2.jpg",
+    "user": "Isa",
+    "username": "ibelreal",
+    "date": "13 div. 2019",
+    "text": "#oidoenadalab Ojalá alguien me mire cómo tú miras a esa empanada",
+    "comments": 2,
+    "retweets": 2,
+    "likes": 5
+  }
+]

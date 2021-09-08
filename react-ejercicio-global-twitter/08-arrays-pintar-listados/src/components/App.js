@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import '../styles/App.scss';
 import adalabBanner from '../images/adalab-banner.jpg';
 import adalabLogo from '../images/adalab-logo.png';
+import tweets from '../data/tweets.json';
+import '../styles/App.scss';
 
 function App() {
   // state
@@ -120,101 +121,31 @@ function App() {
   };
 
   const renderTweets = () => {
-    return (
-      <div>
-        <ul>
-          <li>
-            <article className="tweet__wrapper">
-              <img className="tweet__avatar" src="./assets/avatars/user-4.jpg" alt="" />
-              <div className="tweet__content">
-                <p className="tweet__info">
-                  <span className="tweet__user">Concha Asensio</span>
-                  <span className="tweet__username">@conchaasensio</span>
-                  <span className="tweet__date">3 sep. 2021</span>
-                </p>
-                <p className="tweet__text">
-                  No desesperes, que llegará. A mi click le costó... yo pensé que no llegaría nunca,
-                  pero lo hizo 😉 ¡Ánimo! 💪
-                </p>
-                <ul className="tweet__actions">
-                  <li className="tweet__comments">1</li>
-                  <li className="tweet__retweets">3</li>
-                  <li className="tweet__likes">13</li>
-                  <li className="tweet__share">
-                    <span className="tweet__share--text">Compartir</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article className="tweet__wrapper">
-              <img className="tweet__avatar" src="./assets/avatars/user-1.jpg" alt="" />
-              <div className="tweet__content">
-                <p className="tweet__info">
-                  <span className="tweet__user">Noelia Luque</span>
-                  <span className="tweet__username">@nlsabariego</span>
-                  <span className="tweet__date">26 nov. 2020</span>
-                </p>
-                <p className="tweet__text">Queremos que nos den JS en potitos #oidoenadalab</p>
-                <ul className="tweet__actions">
-                  <li className="tweet__comments">1</li>
-                  <li className="tweet__retweets">3</li>
-                  <li className="tweet__likes">13</li>
-                  <li className="tweet__share">
-                    <span className="tweet__share--text">Compartir</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article className="tweet__wrapper">
-              <img className="tweet__avatar" src="./assets/avatars/user-2.jpg" alt="" />
-              <div className="tweet__content">
-                <p className="tweet__info">
-                  <span className="tweet__user">Isa</span>
-                  <span className="tweet__username">@ibelreal</span>
-                  <span className="tweet__date">13 div. 2019</span>
-                </p>
-                <p className="tweet__text">
-                  #oidoenadalab Ojalá alguien me mire cómo tú miras a esa empanada
-                </p>
-                <ul className="tweet__actions">
-                  <li className="tweet__comments">2</li>
-                  <li className="tweet__retweets">2</li>
-                  <li className="tweet__likes">5</li>
-                  <li className="tweet__share">
-                    <span className="tweet__share--text">Compartir</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </li>{' '}
-          <li>
-            <article className="tweet__wrapper">
-              <img className="tweet__avatar" src="./assets/avatars/user-3.jpg" alt="" />
-              <div className="tweet__content">
-                <p className="tweet__info">
-                  <span className="tweet__user">Isa</span>
-                  <span className="tweet__username">@Beatrizsobri</span>
-                  <span className="tweet__date">27 ene. 2020</span>
-                </p>
-                <p className="tweet__text">Yo antes de Adalab era tecnoplégica #oidoenadalab</p>
-                <ul className="tweet__actions">
-                  <li className="tweet__comments">2</li>
-                  <li className="tweet__retweets">2</li>
-                  <li className="tweet__likes">5</li>
-                  <li className="tweet__share">
-                    <span className="tweet__share--text">Compartir</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </div>
-    );
+    return tweets.map(tweet => {
+      return (
+        <li key={tweet.id}>
+          <article className="tweet__wrapper">
+            <img className="tweet__avatar" src={tweet.avatar} alt={`Avatar de ${tweet.user}`} />
+            <div className="tweet__content">
+              <p className="tweet__info">
+                <span className="tweet__user">{tweet.user}</span>
+                <span className="tweet__username">@{tweet.username}</span>
+                <span className="tweet__date">{tweet.date}</span>
+              </p>
+              <p className="tweet__text">{tweet.text}</p>
+              <ul className="tweet__actions">
+                <li className="tweet__comments">{tweet.comments}</li>
+                <li className="tweet__retweets">{tweet.retweets}</li>
+                <li className="tweet__likes">{tweet.likes}</li>
+                <li className="tweet__share">
+                  <span className="tweet__share--text">Compartir</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      );
+    });
   };
 
   const renderComposeModal = () => {
@@ -256,7 +187,7 @@ function App() {
 
       <main className="main">
         {renderMainHeader()}
-        {renderTweets()}
+        <ul>{renderTweets()}</ul>
         {renderComposeModal()}
       </main>
     </div>
