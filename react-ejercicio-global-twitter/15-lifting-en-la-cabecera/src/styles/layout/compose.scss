@@ -1,0 +1,100 @@
+.compose {
+  &__modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0006;
+  }
+
+  &__modal-wrapper {
+    margin: 2rem auto 0 auto;
+    width: 37rem;
+    border-radius: 1rem;
+    background-color: white;
+  }
+
+  &__modal-header {
+    border-bottom: 1px solid $border;
+    padding: 0.5rem;
+  }
+
+  &__modal-close-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    background-image: url('../../images/icon-close.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: background 0.3s;
+    color: transparent;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  &__modal-content {
+    padding: 0.5rem 1rem;
+    display: flex;
+  }
+
+  &__profile-logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid $border;
+  }
+
+  &__profile-textarea {
+    margin-left: 1rem;
+    width: 100%;
+    height: 6rem;
+    outline: none;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: normal;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #999;
+    }
+  }
+
+  &__modal-footer {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+  }
+
+  &__modal-tweet-btn {
+    padding: 0.4375rem 1rem;
+    background-color: $color-blue-dark-hover;
+    border-radius: 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #1a8cd880;
+      cursor: not-allowed;
+    }
+  }
+}
