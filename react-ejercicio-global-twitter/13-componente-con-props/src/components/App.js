@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import HeaderMenuItem from './HeaderMenuItem';
 import MainHeader from './MainHeader';
 import adalabLogo from '../images/adalab-logo.png';
 import getTweets from '../services/api';
@@ -56,29 +57,10 @@ function App() {
       <header className="header">
         <nav className="menu">
           <ul className="menu__items">
-            <li className="menu__item menu__item--twitter">
-              <a className="menu__link" href="/home" title="Ir al inicio">
-                <span className="text">Ir al inicio</span>
-              </a>
-            </li>
-
-            <li className="menu__item menu__item--home">
-              <a className="menu__link" href="/home" title="Ir al inicio">
-                <span className="text">Ir al inicio</span>
-              </a>
-            </li>
-
-            <li className="menu__item menu__item--search">
-              <a className="menu__link" href="/search" title="Buscar">
-                <span className="text">Buscar</span>
-              </a>
-            </li>
-
-            <li className="menu__item menu__item--profile">
-              <a className="menu__link" href="/profile" title="Perfil">
-                <span className="text">Perfil</span>
-              </a>
-            </li>
+            <HeaderMenuItem text="Ir al inicio" href="/home" liClass="twitter" />
+            <HeaderMenuItem text="Ir al inicio" href="/home" liClass="home" />
+            <HeaderMenuItem text="Buscar" href="/search" liClass="search" />
+            <HeaderMenuItem text="Perfil" href="/profile" liClass="profile" />
 
             <li className="menu__item menu__item--tweet">
               <button className="menu__link" title="Twittear" onClick={handleToggleCompose}>
