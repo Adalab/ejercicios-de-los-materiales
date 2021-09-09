@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 // components
 import HeaderMenuItem from './HeaderMenuItem';
+import HeaderMenuButton from './HeaderMenuButton';
 import MainHeader from './MainHeader';
 import Tweet from './Tweet';
 // services
@@ -66,12 +67,7 @@ function App() {
             <HeaderMenuItem text="Ir al inicio" href="/home" liClass="home" />
             <HeaderMenuItem text="Buscar" href="/search" liClass="search" />
             <HeaderMenuItem text="Perfil" href="/profile" liClass="profile" />
-
-            <li className="menu__item menu__item--tweet">
-              <button className="menu__link" title="Twittear" onClick={handleToggleCompose}>
-                <span className="text">Twittear</span>
-              </button>
-            </li>
+            <HeaderMenuButton text="Twittear" liClass="tweet" handleClick={handleToggleCompose} />
           </ul>
         </nav>
       </header>
