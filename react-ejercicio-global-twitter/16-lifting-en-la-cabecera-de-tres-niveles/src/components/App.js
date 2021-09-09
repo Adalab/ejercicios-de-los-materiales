@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 // components
-import HeaderMenuItem from './HeaderMenuItem';
-import HeaderMenuButton from './HeaderMenuButton';
+import Header from './Header';
 import MainHeader from './MainHeader';
 import Tweet from './Tweet';
 // services
@@ -58,22 +57,6 @@ function App() {
 
   // render helpers
 
-  const renderHeader = () => {
-    return (
-      <header className="header">
-        <nav className="menu">
-          <ul className="menu__items">
-            <HeaderMenuItem text="Ir al inicio" href="/home" liClass="twitter" />
-            <HeaderMenuItem text="Ir al inicio" href="/home" liClass="home" />
-            <HeaderMenuItem text="Buscar" href="/search" liClass="search" />
-            <HeaderMenuItem text="Perfil" href="/profile" liClass="profile" />
-            <HeaderMenuButton text="Twittear" liClass="tweet" handleClick={handleToggleCompose} />
-          </ul>
-        </nav>
-      </header>
-    );
-  };
-
   const renderTweets = () => {
     return tweets.map(tweet => {
       return <Tweet key={tweet.id} tweet={tweet} />;
@@ -115,8 +98,7 @@ function App() {
 
   return (
     <div className="page">
-      {renderHeader()}
-
+      <Header handleToggleCompose={handleToggleCompose} />
       <main className="main">
         <MainHeader />
         <ul>{renderTweets()}</ul>
