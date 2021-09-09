@@ -41,7 +41,8 @@ function App() {
     ev.preventDefault();
     tweets.unshift({
       id: '1243sdf',
-      avatar: 'http://localhost:3000/assets/avatars/user-me.jpg',
+      avatar:
+        '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/twitter-v1/images/user-me.jpg',
       user: 'Adalab',
       username: 'adalab_digital',
       date: '8 sep. 2021',
