@@ -1,6 +1,6 @@
 import adalabBanner from '../images/adalab-banner.jpg';
 import adalabLogo from '../images/adalab-logo.png';
-import '../styles/components/main-header.scss';
+import '../styles/components/MainHeader.scss';
 
 const MainHeader = () => {
   return (
