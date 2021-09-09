@@ -1,0 +1,76 @@
+.tweet {
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.7rem 1rem 0.3rem 1rem;
+    border-bottom: 1px solid $border;
+  }
+
+  &__avatar {
+    margin-right: 1rem;
+    border-radius: 50%;
+  }
+
+  &__content {
+    flex-grow: 1;
+    font-size: $size-main-text;
+  }
+
+  &__user {
+    padding-right: 0.5rem;
+    font-weight: 700;
+  }
+
+  &__username {
+    padding-right: 0.25rem;
+    color: $color-text-secondary;
+  }
+
+  &__date {
+    color: $color-text-secondary;
+
+    &::before {
+      padding-right: 0.25rem;
+      content: '·';
+    }
+  }
+
+  &__actions {
+    display: flex;
+    padding: 0.7rem 0 0.3rem 0;
+
+    & > * {
+      width: 25%;
+    }
+  }
+
+  &__comments,
+  &__retweets,
+  &__likes,
+  &__share {
+    padding-left: 1.75rem;
+    background-repeat: no-repeat;
+    font-size: 0.8125rem;
+    color: $color-text-secondary;
+  }
+
+  &__comments {
+    background-image: url('../../images/icon-comment.png');
+  }
+
+  &__retweets {
+    background-image: url('../../images/icon-retweet.png');
+  }
+
+  &__likes {
+    background-image: url('../../images/icon-likes.png');
+  }
+
+  &__share {
+    background-image: url('../../images/icon-share.png');
+
+    &--text {
+      display: none;
+    }
+  }
+}
