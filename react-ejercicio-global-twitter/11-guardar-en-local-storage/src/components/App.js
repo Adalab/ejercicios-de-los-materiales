@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import adalabBanner from '../images/adalab-banner.jpg';
 import adalabLogo from '../images/adalab-logo.png';
 import getTweets from '../services/api';
+import ls from '../services/local-storage';
 import '../styles/App.scss';
 
 function App() {
   // state
   const [composeIsOpen, setComposeIsOpen] = useState(false);
-  const [composeText, setComposeText] = useState('');
+  const [composeText, setComposeText] = useState(ls.get('composeText', ''));
   const [tweets, setTweets] = useState([]);
 
   // effects
@@ -16,6 +17,10 @@ function App() {
       setTweets(data);
     });
   }, []);
+
+  useEffect(() => {
+    ls.set('composeText', composeText);
+  }, [composeText]);
 
   // events
   const handleToggleCompose = () => {
