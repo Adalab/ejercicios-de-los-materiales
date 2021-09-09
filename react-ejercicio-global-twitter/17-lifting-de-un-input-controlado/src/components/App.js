@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 // components
+import ComposeModal from './ComposeModal';
 import Header from './Header';
 import MainHeader from './MainHeader';
 import Tweet from './Tweet';
 // services
 import getTweets from '../services/api';
 import ls from '../services/local-storage';
-// images
-import adalabLogo from '../images/adalab-logo.png';
 // styles
 import '../styles/App.scss';
 
@@ -33,12 +32,11 @@ function App() {
     setComposeIsOpen(!composeIsOpen);
   };
 
-  const handleComposeText = ev => {
-    setComposeText(ev.target.value);
+  const handleComposeText = value => {
+    setComposeText(value);
   };
 
   const handleComposeSubmit = ev => {
-    ev.preventDefault();
     tweets.unshift({
       id: '1243sdf',
       avatar:
@@ -65,34 +63,14 @@ function App() {
   };
 
   const renderComposeModal = () => {
-    const isButtonDisabled = composeText.length === 0;
     if (composeIsOpen === true) {
       return (
-        <div className="compose__modal-overlay">
-          <form onSubmit={handleComposeSubmit}>
-            <div className="compose__modal-wrapper">
-              <div className="compose__modal-header">
-                <button className="compose__modal-close-btn" onClick={handleToggleCompose}>
-                  Cerrar
-                </button>
-              </div>
-              <div className="compose__modal-content">
-                <img className="compose__profile-logo" src={adalabLogo} alt="Logo de Adalab" />
-                <textarea
-                  className="compose__profile-textarea"
-                  placeholder="¿Qué está pasando?"
-                  value={composeText}
-                  onChange={handleComposeText}
-                />
-              </div>
-              <div className="compose__modal-footer">
-                <button className="compose__modal-tweet-btn" disabled={isButtonDisabled}>
-                  Twittear
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+        <ComposeModal
+          composeText={composeText}
+          handleComposeText={handleComposeText}
+          handleToggleCompose={handleToggleCompose}
+          handleComposeSubmit={handleComposeSubmit}
+        />
       );
     }
   };
