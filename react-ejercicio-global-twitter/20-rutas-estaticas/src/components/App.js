@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 // components
 import ComposeModal from './ComposeModal';
 import Header from './Header';
+import Home from './Home';
 import Profile from './Profile';
+import Search from './Search';
 import Tweets from './Tweets';
 // services
 import getTweets from '../services/api';
@@ -73,6 +75,8 @@ function App() {
     <div className="page">
       <Header handleToggleCompose={handleToggleCompose} />
       <main className="main">
+        {/* <Search /> */}
+        {/* <Home /> */}
         <Profile />
         <Tweets tweets={tweets} />
         {renderComposeModal()}
