@@ -1,0 +1,34 @@
+@import '../core/variables.scss';
+
+.search {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid $border;
+
+  &__input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0px 1rem 0 3rem;
+    background-color: #eff3f4;
+    background-image: url('../../images/icon-search.png');
+    background-repeat: no-repeat;
+    background-position-x: 1rem;
+    background-position-y: center;
+    background-size: 1.5rem;
+    border: 1px solid #eff3f4;
+    border-radius: 1.25rem;
+    outline: none;
+    transition: background 0.3s, border-color 0.3s;
+
+    &:focus {
+      background-color: white;
+      border: 1px solid $color-blue-dark-hover;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+}
