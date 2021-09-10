@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 // components
 import ComposeModal from './ComposeModal';
 import Header from './Header';
@@ -75,10 +76,21 @@ function App() {
     <div className="page">
       <Header handleToggleCompose={handleToggleCompose} />
       <main className="main">
-        {/* <Search /> */}
-        {/* <Home /> */}
-        <Profile />
-        <Tweets tweets={tweets} />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+            <Tweets tweets={tweets} />
+          </Route>
+          <Route path="/search">
+            <Search />
+            <Tweets tweets={tweets} />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+            <Tweets tweets={tweets} />
+          </Route>
+        </Switch>
+
         {renderComposeModal()}
       </main>
     </div>
