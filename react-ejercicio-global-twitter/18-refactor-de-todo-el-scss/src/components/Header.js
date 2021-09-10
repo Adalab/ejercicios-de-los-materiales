@@ -1,5 +1,6 @@
 import HeaderMenuItem from './HeaderMenuItem';
 import HeaderMenuButton from './HeaderMenuButton';
+import '../styles/components/Header.scss';
 
 const Header = props => {
   return (

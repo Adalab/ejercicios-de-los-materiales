@@ -1,4 +1,5 @@
 import adalabLogo from '../images/adalab-logo.png';
+import '../styles/components/ComposeModal.scss';
 
 const ComposeModal = props => {
   const handleToggleCompose = () => {

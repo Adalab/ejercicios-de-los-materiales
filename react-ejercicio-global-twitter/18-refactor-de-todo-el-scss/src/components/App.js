@@ -8,7 +8,7 @@ import Tweet from './Tweet';
 import getTweets from '../services/api';
 import ls from '../services/local-storage';
 // styles
-import '../styles/App.scss';
+import '../styles/layout/App.scss';
 
 function App() {
   // state

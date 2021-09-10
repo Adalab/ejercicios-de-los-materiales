@@ -1,3 +1,10 @@
+@import '../core/reset';
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
 .main {
   width: 37.5rem;
   border-left: solid 1px #eee;
