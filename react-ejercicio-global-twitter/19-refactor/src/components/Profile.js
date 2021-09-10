@@ -1,10 +1,10 @@
 import adalabBanner from '../images/adalab-banner.jpg';
 import adalabLogo from '../images/adalab-logo.png';
-import '../styles/components/MainHeader.scss';
+import '../styles/components/Profile.scss';
 
-const MainHeader = () => {
+const Profile = () => {
   return (
-    <section className="main__header">
+    <section className="profile">
       <header>
         <h1 className="header__title">
           <span className="header__account">Adalab</span>
@@ -58,4 +58,4 @@ const MainHeader = () => {
   );
 };
 
-export default MainHeader;
+export default Profile;
