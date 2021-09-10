@@ -22,8 +22,15 @@
       }
     }
 
+    .menu__link.active {
+      background-color: #eee;
+    }
+
     &__item--twitter .menu__link {
       background-image: url('../../images/icon-twitter.png');
+      &.active {
+        background-color: transparent;
+      }
     }
 
     &__item--home .menu__link {
