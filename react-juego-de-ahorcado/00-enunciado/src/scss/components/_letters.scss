@@ -1,0 +1,20 @@
+.solution,
+.feedback {
+  margin-bottom: 3.75rem;
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  min-height: 3.5625rem;
+
+  .letter {
+    margin: 0 0.25rem;
+    min-width: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 3px solid white;
+    text-align: center;
+  }
+}

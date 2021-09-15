@@ -1,0 +1,40 @@
+.form {
+  margin-bottom: 1rem;
+  text-align: center;
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    text-align: center;
+    font-size: 4rem;
+    outline: none;
+    animation-name: borderBottomInput;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    &[maxLength='1'] {
+      width: 5rem;
+    }
+
+    &[maxLength='15'] {
+      width: 25rem;
+    }
+
+    &::selection {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+@keyframes borderBottomInput {
+  from {
+    border-bottom-color: white;
+  }
+  50% {
+    border-bottom-color: transparent;
+  }
+  to {
+    border-bottom-color: white;
+  }
+}

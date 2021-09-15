@@ -1,0 +1,140 @@
+$dummyEnabledColor: white;
+$dummyDisabledColor: rgba(255, 255, 255, 0.2);
+$dummyTransitionTime: 1s;
+
+.dummy {
+  margin-left: 4rem;
+  position: relative;
+  min-width: 15rem;
+  height: 25rem;
+
+  .line {
+    position: absolute;
+    display: block;
+    height: 0.5rem;
+    background-color: $dummyDisabledColor;
+    border-radius: 0.25rem;
+    transition: background-color $dummyTransitionTime ease;
+  }
+
+  .head {
+    position: absolute;
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 0.5rem solid $dummyDisabledColor;
+    border-radius: 50%;
+    transition: border $dummyTransitionTime ease;
+  }
+
+  .eye {
+    position: absolute;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: $dummyDisabledColor;
+    transition: color $dummyTransitionTime ease;
+    &::before {
+      content: '×';
+    }
+  }
+
+  .error-1 {
+    width: 6rem;
+    left: 0;
+    bottom: 0;
+  }
+
+  .error-2 {
+    transform: rotate(90deg);
+    width: 23rem;
+    top: 13rem;
+    left: -8.5rem;
+  }
+
+  .error-3 {
+    width: 8rem;
+    top: 1.75rem;
+    left: 2.75rem;
+  }
+
+  .error-4 {
+    transform: rotate(135deg);
+    width: 4rem;
+    top: 3rem;
+    left: 2.25rem;
+  }
+
+  .error-5 {
+    transform: rotate(90deg);
+    width: 6rem;
+    top: 4.5rem;
+    left: 7.5rem;
+  }
+
+  .error-6 {
+    top: 7.5rem;
+    left: 8.75rem;
+  }
+
+  .error-7 {
+    transform: rotate(90deg);
+    width: 6rem;
+    top: 13.5rem;
+    left: 7.5rem;
+  }
+
+  .error-8 {
+    transform: rotate(60deg);
+    width: 3rem;
+    top: 13.5rem;
+    left: 9.75rem;
+  }
+
+  .error-9 {
+    transform: rotate(120deg);
+    width: 3rem;
+    top: 13.5rem;
+    left: 8.25rem;
+  }
+
+  .error-10 {
+    transform: rotate(60deg);
+    width: 4rem;
+    top: 18rem;
+    left: 9.5rem;
+  }
+
+  .error-11 {
+    transform: rotate(120deg);
+    width: 4rem;
+    top: 18rem;
+    left: 7.5rem;
+  }
+
+  .error-12 {
+    top: 7.5rem;
+    left: 9.5rem;
+  }
+
+  .error-13 {
+    top: 7.5rem;
+    left: 10.5rem;
+  }
+
+  // https://sass-lang.com/documentation/at-rules/control/for
+  @for $e from 1 through 13 {
+    @for $s from 1 through $e {
+      &.error-#{$e} {
+        .error-#{$s}.line {
+          background-color: $dummyEnabledColor;
+        }
+        .error-#{$s}.head {
+          border-color: $dummyEnabledColor;
+        }
+        .error-#{$s}.eye {
+          color: $dummyEnabledColor;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "env": {
+    "dev": {
+      "dest": "public"
+    },
+    "producction": {
+      "dest": "docs"
+    }
+  },
+  "fonts": {
+    "src": "src/fonts/*",
+    "dest": "public/assets/fonts/",
+    "dist": "docs/assets/fonts/"
+  },
+  "css": {
+    "src": "src/scss/**/*.scss",
+    "dest": "public/assets/css/",
+    "dist": "docs/assets/css/"
+  },
+  "html": {
+    "src": "src/html/**.html",
+    "dest": "public/",
+    "dist": "docs/"
+  },
+  "js": {
+    "src": [
+      "src/js/**/*.js"
+    ],
+    "dest": "public/assets/js/",
+    "dist": "docs/assets/js/"
+  },
+  "images": {
+    "src": "src/images/**/*.{gif,jpg,jpeg,JPG,JPEG,png,svg}",
+    "dest": "public/assets/images/",
+    "dist": "docs/assets/images/"
+  },
+  "watch": {
+    "html": "src/**/*.html"
+  }
+}

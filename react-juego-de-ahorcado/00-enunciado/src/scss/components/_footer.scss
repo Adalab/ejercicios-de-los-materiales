@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+
+  * {
+    font-size: 0.75rem;
+  }
+
+  &__menu-item {
+    display: inline-block;
+    list-style: none;
+  }
+
+  &__menu-link {
+    padding-right: 2rem;
+
+    &.active {
+      text-decoration: none;
+    }
+  }
+}
