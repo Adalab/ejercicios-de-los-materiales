@@ -1,0 +1,35 @@
+.contact {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 20rem;
+    list-style: none;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    background-color: #a349a4;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-weight: bold;
+    color: #fff;
+
+    & > * {
+      margin: 3px 0;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    font-weight: normal;
+    width: 5rem;
+    color: #fff;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+}
