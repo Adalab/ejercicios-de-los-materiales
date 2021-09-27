@@ -11,7 +11,7 @@ import Search from './Search';
 import Tweets from './Tweets';
 import TweetDetail from './TweetDetail';
 // services
-import getTweets from '../services/api';
+import api from '../services/api';
 import ls from '../services/local-storage';
 import date from '../services/date';
 // styles
@@ -22,15 +22,22 @@ function App() {
   const [composeIsOpen, setComposeIsOpen] = useState(false);
   const [composeText, setComposeText] = useState(ls.get('composeText', ''));
   const [tweets, setTweets] = useState([]);
+  const [profile, setProfile] = useState({});
   const [showLoading, setShowLoading] = useState(false);
   const [searchText, setSearchText] = useState('');
 
   // effects
   useEffect(() => {
     setShowLoading(true);
-    getTweets().then(data => {
+    api.getTweets().then(data => {
       setShowLoading(false);
       setTweets(data);
+    });
+  }, []);
+
+  useEffect(() => {
+    api.getProfile().then(data => {
+      setProfile(data);
     });
   }, []);
 
@@ -50,10 +57,9 @@ function App() {
   const handleComposeSubmit = ev => {
     tweets.unshift({
       id: uuid(),
-      avatar:
-        '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/twitter-v1/images/user-me.jpg',
-      user: 'Adalab',
-      username: 'adalab_digital',
+      avatar: profile.avatar,
+      user: profile.user,
+      username: profile.username,
       date: date.getCurrentDate(),
       text: composeText,
       comments: 0,
@@ -118,7 +124,7 @@ function App() {
             <Tweets tweets={getFilteredTweets()} />
           </Route>
           <Route path="/profile">
-            <Profile />
+            <Profile profile={profile} />
             <Tweets tweets={tweets} />
           </Route>
           <Route path="/tweet/:tweetId">
