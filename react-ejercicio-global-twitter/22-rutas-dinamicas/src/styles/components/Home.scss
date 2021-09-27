@@ -1,0 +1,17 @@
+@import '../core/variables.scss';
+
+.home {
+  padding-left: 1rem;
+  border-bottom: 1px solid $border;
+
+  .header {
+    &__title {
+      display: flex;
+      align-items: center;
+      height: 3.3125rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 0.9;
+    }
+  }
+}
