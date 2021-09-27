@@ -12,7 +12,6 @@ import getTweets from '../services/api';
 import ls from '../services/local-storage';
 // styles
 import '../styles/layout/App.scss';
-import TweetDetail from './TweetDetail';
 
 function App() {
   // state
