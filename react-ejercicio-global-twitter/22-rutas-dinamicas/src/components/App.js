@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
 // components
 import ComposeModal from './ComposeModal';
 import Header from './Header';
@@ -7,6 +7,7 @@ import Home from './Home';
 import Profile from './Profile';
 import Search from './Search';
 import Tweets from './Tweets';
+import TweetDetail from './TweetDetail';
 // services
 import getTweets from '../services/api';
 import ls from '../services/local-storage';
@@ -71,6 +72,18 @@ function App() {
     }
   };
 
+  const routeTweetData = useRouteMatch('/tweet/:tweetId');
+
+  const getRouteTweet = () => {
+    if (routeTweetData) {
+      const routeTweetId = routeTweetData.params.tweetId;
+      const routeTweet = tweets.find(tweet => {
+        return tweet.id === routeTweetId;
+      });
+      return routeTweet || {};
+    }
+  };
+
   return (
     <div className="page">
       <Header handleToggleCompose={handleToggleCompose} />
@@ -87,6 +100,9 @@ function App() {
           <Route path="/profile">
             <Profile />
             <Tweets tweets={tweets} />
+          </Route>
+          <Route path="/tweet/:tweetId">
+            <TweetDetail tweet={getRouteTweet()} />
           </Route>
         </Switch>
 
