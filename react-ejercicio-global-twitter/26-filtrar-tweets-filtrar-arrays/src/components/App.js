@@ -21,6 +21,7 @@ function App() {
   const [composeText, setComposeText] = useState(ls.get('composeText', ''));
   const [tweets, setTweets] = useState([]);
   const [showLoading, setShowLoading] = useState(false);
+  const [searchText, setSearchText] = useState('');
 
   // effects
   useEffect(() => {
@@ -62,6 +63,10 @@ function App() {
     setComposeText('');
   };
 
+  const handleSearchText = searchText => {
+    setSearchText(searchText);
+  };
+
   // render helpers
   const renderComposeModal = () => {
     if (composeIsOpen === true) {
@@ -74,6 +79,15 @@ function App() {
         />
       );
     }
+  };
+
+  const getFilteredTweets = () => {
+    return tweets.filter(tweet => {
+      return (
+        tweet.text.toLowerCase().includes(searchText.toLowerCase()) ||
+        tweet.user.toLowerCase().includes(searchText.toLowerCase())
+      );
+    });
   };
 
   // get route tweet id
@@ -98,8 +112,8 @@ function App() {
             <Tweets tweets={tweets} />
           </Route>
           <Route path="/search">
-            <Search />
-            <Tweets tweets={tweets} />
+            <Search searchText={searchText} handleSearchText={handleSearchText} />
+            <Tweets tweets={getFilteredTweets()} />
           </Route>
           <Route path="/profile">
             <Profile />

@@ -1,6 +1,10 @@
 import '../styles/components/Search.scss';
 
-const Search = () => {
+const Search = props => {
+  const handleSearchInput = ev => {
+    props.handleSearchText(ev.target.value);
+  };
+
   return (
     <form className="search">
       <input
@@ -10,6 +14,8 @@ const Search = () => {
         name="search"
         id="search"
         placeholder="Buscar en tweets"
+        value={props.searchText}
+        onChange={handleSearchInput}
       />
     </form>
   );
