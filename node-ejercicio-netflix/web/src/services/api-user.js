@@ -2,11 +2,11 @@
 
 const sendLoginToApi = data => {
   console.log('Se están enviando datos al login:', data);
-  return fetch('//beta.adalab.es/ejercicios-extra/api/fake/empty.json')
+  // CAMBIA ESTE FETCH PARA QUE APUNTE A UN ENDPOINT DE TU SERVIDOR, PIENSA SI DEBE SER GET O POST, PIENSA QUÉ DATOS DEBES ENVIAR, ETC
+  return fetch('//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/empty.json')
     .then(response => response.json())
     .then(() => {
-      // estos son datos fake
-      // solo son válidos los emails de gmail
+      // CAMBIA EL CONTENIDO DE ESTE THEN PARA GESTIONAR LA RESPUESTA DEL SERVIDOR Y RETORNAR AL COMPONENTE APP LO QUE NECESITA
       if (data.email.includes('gmail')) {
         return {
           success: true,
@@ -25,9 +25,11 @@ const sendLoginToApi = data => {
 
 const sendSingUpToApi = data => {
   console.log('Se están enviando datos al signup:', data);
-  return fetch('//beta.adalab.es/ejercicios-extra/api/fake/empty.json')
+  // CAMBIA ESTE FETCH PARA QUE APUNTE A UN ENDPOINT DE TU SERVIDOR, PIENSA SI DEBE SER GET O POST, PIENSA QUÉ DATOS DEBES ENVIAR, ETC
+  return fetch('//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/empty.json')
     .then(response => response.json())
     .then(() => {
+      // CAMBIA EL CONTENIDO DE ESTE THEN PARA GESTIONAR LA RESPUESTA DEL SERVIDOR Y RETORNAR AL COMPONENTE APP LO QUE NECESITA
       return {
         success: false,
         errorMessage: 'Usuario ya existente'
@@ -39,14 +41,17 @@ const sendSingUpToApi = data => {
 
 const sendProfileToApi = (userId, data) => {
   console.log('Se están enviando datos al profile:', userId, data);
-  return fetch('//beta.adalab.es/ejercicios-extra/api/fake/empty.json');
+  // CAMBIA ESTE FETCH PARA QUE APUNTE A UN ENDPOINT DE TU SERVIDOR, PIENSA SI DEBE SER GET O POST, PIENSA QUÉ DATOS DEBES ENVIAR, ETC
+  return fetch('//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/empty.json');
 };
 
 const getProfileFromApi = userId => {
   console.log('Se están pidiendo datos del profile del usuario:', userId);
-  return fetch('//beta.adalab.es/ejercicios-extra/api/fake/empty.json')
+  // CAMBIA ESTE FETCH PARA QUE APUNTE A UN ENDPOINT DE TU SERVIDOR, PIENSA SI DEBE SER GET O POST, PIENSA QUÉ DATOS DEBES ENVIAR, ETC
+  return fetch('//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/empty.json')
     .then(response => response.json())
     .then(() => {
+      // CAMBIA EL CONTENIDO DE ESTE THEN PARA GESTIONAR LA RESPUESTA DEL SERVIDOR Y RETORNAR AL COMPONENTE APP LO QUE NECESITA
       return {
         success: true,
         name: 'Maricarmen',
@@ -60,9 +65,11 @@ const getProfileFromApi = userId => {
 
 const getUserMoviesFromApi = userId => {
   console.log('Se están pidiendo datos de las películas de la usuaria:', userId);
-  return fetch('//beta.adalab.es/ejercicios-extra/api/fake/empty.json')
+  // CAMBIA ESTE FETCH PARA QUE APUNTE A UN ENDPOINT DE TU SERVIDOR, PIENSA SI DEBE SER GET O POST, PIENSA QUÉ DATOS DEBES ENVIAR, ETC
+  return fetch('//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/empty.json')
     .then(response => response.json())
     .then(() => {
+      // CAMBIA EL CONTENIDO DE ESTE THEN PARA GESTIONAR LA RESPUESTA DEL SERVIDOR Y RETORNAR AL COMPONENTE APP LO QUE NECESITA
       return {
         success: true,
         movies: [
@@ -70,7 +77,8 @@ const getUserMoviesFromApi = userId => {
             id: 1,
             title: 'Gambita de dama',
             gender: 'Drama',
-            image: 'https://via.placeholder.com/150'
+            image:
+              '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/images/gambito-de-dama.jpg'
           }
         ]
       };

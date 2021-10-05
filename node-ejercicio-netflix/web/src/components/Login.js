@@ -26,7 +26,7 @@ const Login = props => {
   // render
 
   const renderErrorMessage = () => {
-    // Si el API ha devuelto un error, APP lo guarda en el estado y nos lo pasa
+    // Si el API ha devuelto un error, App lo guarda en su estado y nos lo pasa por props
     if (props.loginErrorMessage !== '') {
       return (
         <p className="border--medium border--warning mt-1">

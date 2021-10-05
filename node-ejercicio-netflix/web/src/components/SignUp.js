@@ -16,7 +16,7 @@ const SignUp = props => {
 
   const handleForm = ev => {
     ev.preventDefault();
-    // enviamos los datos a App y este al API
+    // Enviamos los datos a App y este al API
     props.sendSingUpToApi({
       email: email,
       password: password

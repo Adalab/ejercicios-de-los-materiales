@@ -77,8 +77,9 @@ const App = () => {
   Como queremos que el back devuelva el id de la usuaria sendLoginToApi recibe el email y la contraseña que ella haya escrito.
   */
   const sendLoginToApi = loginData => {
-    // limpiamos el error antes de enviar los datos al API
+    // Limpiamos el error antes de enviar los datos al API
     setLoginErrorMessage('');
+    // Enviamos los datos al API
     apiUser.sendLoginToApi(loginData).then(response => {
       if (response.success === true) {
         setUserId(response.userId);
@@ -92,13 +93,14 @@ const App = () => {
   };
 
   /*
-  Event: enviar datos del sign up al API.
+  Event: enviar datos del sign up (o registro) al API.
   Con este evento enviamos los datos del sign up al servidor cuando la usuaria lanza el evento.
   Como queremos que el back devuelva el id de la usuaria sendSingUpToApi recibe el email y la contraseña que ella haya escrito.
   */
   const sendSingUpToApi = data => {
-    // limpiamos el error antes de enviar los datos al API
+    // Limpiamos el error antes de enviar los datos al API
     setSignUpErrorMessage('');
+    // Enviamos los datos al API
     apiUser.sendSingUpToApi(data).then(response => {
       if (response.success === true) {
         setUserId(response.userId);
@@ -119,7 +121,7 @@ const App = () => {
   */
   const sendProfileToApi = (userId, data) => {
     apiUser.sendProfileToApi(userId, data).then(() => {
-      // Después de enviar los datos al servidor los volvemos a pedir para tenerlos actualizados
+      // Después de enviar los datos al servidor los volvemos a pedir al servidor para tenerlos actualizados
       apiUser.getProfileFromApi(userId).then(response => {
         setUserName(response.name);
         setUserEmail(response.email);
