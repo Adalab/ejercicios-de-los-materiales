@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>AdaKitten</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="logo">
+        <img class="img" src="./img/favicon.png" alt="Logo de Adacats" />
+        <h1>AdaKitten</h1>
+        <nav class="menu-nav">
+          <ul class="menu">
+            <li class="item">
+              <span class="fas fa-plus-circle"> </span>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <section class="new-form collapsed">
+        <h2 class="title">¿Agregamos un nuevo gatito a Adalab?</h2>
+        <form class="form">
+          <input
+            class="input"
+            type="text"
+            placeholder="Url de la foto"
+            required
+          />
+          <input class="input" type="text" placeholder="Nombre" required />
+          <input class="input" type="text" placeholder="Raza" />
+          <input class="input" type="text" placeholder="Descripción" required />
+          <label class=""></label>
+          <button class="button">Añadir</button>
+          <button class="button-cancel">Cancelar</button>
+        </form>
+      </section>
+
+      <section class="about-us">
+        <h1 class="title">AdaKitten</h1>
+        <h2 class="subtitle">Los gatos más molones de Adalab</h2>
+      </section>
+
+      <section class="search">
+        <h2 class="title">Filtrar / Buscar</h2>
+        <form class="form">
+          <input class="input" type="text" placeholder="Descripción" />
+          <input
+            class="input"
+            type="select"
+            name="raza"
+            placeholder="Raza"
+            id="raza"
+          />
+
+          <button class="button">Buscar</button>
+        </form>
+      </section>
+
+      <section class="data">
+        <ul class="list">
+          <li class="card">
+            <article>
+              <img
+                class="card_img"
+                src="https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg"
+                alt="gatito"
+              />
+              <h3 class="card_title">Anastacio</h3>
+              <h4 class="card_race">British Shorthair</h4>
+              <p class="card_description">
+                Ruiseño, juguetón, le guta estar tranquilo y que nadie le
+                moleste. Es una maravilla acariciarle!
+              </p>
+            </article>
+          </li>
+
+          <li class="card">
+            <img
+              class="card_img"
+              src="https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg"
+              alt="gatito"
+            />
+            <h3 class="card_title">Fiona</h3>
+            <h4 class="card_race">British Shorthair</h4>
+            <p class="card_description">
+              Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste.
+              Es una maravilla acariciarle!
+            </p>
+          </li>
+          <li class="card">
+            <img
+              class="card_img"
+              src="https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a.jpg"
+              alt="gatito"
+            />
+            <h3 class="card_title">Cielo</h3>
+            <h4 class="card_race">British Shorthair</h4>
+            <p class="card_description">
+              Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste.
+              Es una maravilla acariciarle!
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="subtittle">&copy; Adalab 2022</h3>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

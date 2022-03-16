@@ -1,0 +1,217 @@
+:root {
+  --color-green: #14d9c4;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  color: grey;
+}
+
+li {
+  list-style: none;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+    0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+    0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 30px;
+}
+.header .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80vh;
+}
+
+.header .menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .menu {
+  display: flex;
+}
+
+.menu .item {
+  padding: 10px;
+}
+
+.header .img {
+  width: 30px;
+  padding-right: 10px;
+}
+
+.header .view {
+  display: flex;
+}
+
+.header .view .item {
+  padding-right: 10px;
+}
+
+.about-us {
+  background-image: url("../img/fondo.jpeg");
+  width: 100%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us .title {
+  color: white;
+  font-size: 72px;
+}
+.about-us .subtitle {
+  color: orange;
+  font-size: 36px;
+}
+
+.search {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+    0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+    0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  height: 150px;
+  transform: translate(10%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search .title {
+  color: fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.data {
+  padding: 20px;
+}
+
+.cardview {
+}
+
+.listview {
+}
+
+.data .list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  overflow: hidden;
+  padding: 10px;
+  transition: 0.25s all;
+  width: 30vw;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+    0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+    0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  text-align: center;
+}
+
+.card_img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card_title {
+  font-weight: 600;
+  padding: 10px;
+}
+
+.card_race {
+  padding: 10px;
+}
+.card_description {
+  padding: 10px;
+}
+
+.footer {
+  background-color: orange;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.new-form {
+  top: 50px;
+  width: 40vh;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+    0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+    0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-form .title {
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.new-form .form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.input {
+  margin: 5px;
+  padding: 5px;
+  border: 0.5px solid orange;
+  color: grey;
+}
+
+.button {
+  background-color: orange;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
+
+.collapsed {
+  display: none;
+}
+
+.button-cancel {
+  background-color: grey;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
