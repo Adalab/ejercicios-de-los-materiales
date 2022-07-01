@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 // components
 import Header from './Header';
 import AllMovies from './AllMovies';
@@ -161,33 +161,40 @@ const App = () => {
       No es necesario pasarle el userId, no necesita saberlo, le basta con saber si está logada o no.
       De esta forma Header maneja datos más simples y solo los que necesita. Queremos que Header sea lo más simple posible. */}
       <Header isUserLogged={!!userId} logout={logout} />
-      <Switch>
-        <Route exact path="/">
-          <AllMovies
-            movies={appMovies}
-            allMoviesOptionGender={allMoviesOptionGender}
-            allMoviesOptionSort={allMoviesOptionSort}
-            handleAllMoviesOptions={handleAllMoviesOptions}
-          />
-        </Route>
-        <Route path="/my-movies">
+
+      <Routes>
+        <Route exact path="/"
+          element={
+            <AllMovies
+              movies={appMovies}
+              allMoviesOptionGender={allMoviesOptionGender}
+              allMoviesOptionSort={allMoviesOptionSort}
+              handleAllMoviesOptions={handleAllMoviesOptions}
+            />
+          } />
+
+        <Route path="/my-movies" element={
           <MyMovies movies={userMovies} />
-        </Route>
-        <Route path="/login">
-          <Login loginErrorMessage={loginErrorMessage} sendLoginToApi={sendLoginToApi} />
-        </Route>
-        <Route path="/signup">
-          <SignUp signUpErrorMessage={signUpErrorMessage} sendSingUpToApi={sendSingUpToApi} />
-        </Route>
-        <Route path="/profile">
-          <Profile
-            userName={userName}
-            userEmail={userEmail}
-            userPassword={userPassword}
-            sendProfileToApi={sendProfileToApi}
-          />
-        </Route>
-      </Switch>
+        } />
+
+        <Route path="/login"
+          element=
+          {<Login loginErrorMessage={loginErrorMessage} sendLoginToApi={sendLoginToApi} />} />
+
+        <Route path="/signup"
+          element={
+            <SignUp signUpErrorMessage={signUpErrorMessage} sendSingUpToApi={sendSingUpToApi} />} />
+
+        <Route path="/profile"
+          element={
+            <Profile
+              userName={userName}
+              userEmail={userEmail}
+              userPassword={userPassword}
+              sendProfileToApi={sendProfileToApi}
+            />} />
+
+      </Routes>
     </>
   );
 };
