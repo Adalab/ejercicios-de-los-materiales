@@ -20,7 +20,7 @@ De esta manera aplicaremos el color a cada cuadrado.
 
 ## 2º El retorno de las paletas
 
-Ahora que sabemos pintar una paleta vamos a ver las paletas de las mejores naves de ciencia ficción, en esta URL **https://beta.adalab.es/ejercicios-extra/js-ejercicio-de-paletas/data/palettes.json** tenemos a las mejores: ¡¡¡Píntalas todas!!
+Ahora que sabemos pintar una paleta vamos a ver las paletas de las mejores naves de ciencia ficción, en esta URL **https://beta.adalab.es/ejercicios-de-los-materiales/js-ejercicio-de-paletas/data/palettes.json** tenemos a las mejores: ¡¡¡Píntalas todas!!
 
 ![Listado de Paletas](./assets/images/list_palettes.png)
 
