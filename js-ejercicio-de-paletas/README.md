@@ -4,7 +4,7 @@
 
 Vamos a sacar a la diseñadora que llevamos dentro: queremos pintar paletas que podríamos usar en diferentes páginas web, y como somos unas freaks pues a cada paleta le ponemos nombres de naves espaciales de películas, a lo loco.
 
-Esta vez tenemos una URL **https://beta.adalab.es/ejercicios-extra/js-ejercicio-de-paletas/data/palette.json** que nos devuelve datos de una paleta y tenemos que pintarla como en el ejemplo:
+Esta vez tenemos una URL **https://beta.adalab.es/ejercicios-de-los-materiales/js-ejercicio-de-paletas/data/palette.json** que nos devuelve datos de una paleta y tenemos que pintarla como en el ejemplo:
 
 ![Propuesta de diseño](./assets/images/palette.png)
 
