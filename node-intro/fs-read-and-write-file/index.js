@@ -20,6 +20,7 @@ const writeFile = (fileName, fileContent, callback) => {
   });
 };
 
+//ejecución del script
 readFile('./input.txt', fileContent => {
   const currentDate = new Date().toString();
   const newFileContent = `${currentDate}: ${fileContent}`;

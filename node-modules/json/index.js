@@ -1,5 +1,5 @@
 const moment = require('moment');
-const configData = require('./config-es.json');
+const configData = require('./config-us.json');
 
 // 1º Node imports file
 // 2º JSON.parse()

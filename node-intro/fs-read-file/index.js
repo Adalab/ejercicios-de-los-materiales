@@ -9,14 +9,5 @@ const handleFile = (err, fileContent) => {
   }
 };
 
-fs.readFile('./input.foo', 'utf8', handleFile); // asynchronous
+fs.readFile('./input.txt', 'utf8', handleFile); // asynchronous
 
-// listen event
-
-// const btnElement = document.querySelector('.btn');
-
-// const handleClick = ev => {
-//   console.log(ev);
-// };
-
-// btnElement.addEventListener('click', handleClick);

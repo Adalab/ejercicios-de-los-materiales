@@ -6,12 +6,11 @@ const getSquareArea = base => {
   return base * base;
 };
 
+
 module.exports = {
   getTriangleArea: getTriangleArea,
   getSquareArea: getSquareArea
+
 };
 
-// export default {
-//   getTriangleArea: getTriangleArea,
-//   getSquareArea: getSquareArea
-// };
+

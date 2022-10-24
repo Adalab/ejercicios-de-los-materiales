@@ -11,4 +11,4 @@ const handleWriteFile = err => {
   }
 };
 
-fs.writeFile('./output.txt', fileContent, handleWriteFile);
+fs.writeFile('./output.txt', fileContent, handleWriteFile); //callback
