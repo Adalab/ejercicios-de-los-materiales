@@ -22,7 +22,7 @@ const Profile = props => {
   const handleForm = ev => {
     ev.preventDefault();
     // enviamos los datos a App y este al API
-    props.sendProfileToApi({
+    props.sendProfileToApi(props.userId, {
       name: name,
       email: email,
       password: password

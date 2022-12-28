@@ -192,6 +192,7 @@ const App = () => {
               userEmail={userEmail}
               userPassword={userPassword}
               sendProfileToApi={sendProfileToApi}
+              userId={userId}
             />} />
 
       </Routes>
