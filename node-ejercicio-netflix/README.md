@@ -1,80 +1,89 @@
 # Ejercicio de Netflix
 
-### Cómo arrancar el backend
-
-En la raíz del proyecto:
-
-1. Ejecutar `npm install`.
-1. Ejecutar `npm start` o `npm run dev`.
-
-El backend se arrancará en http://localhost:4000
-
-### Cómo ejecutar el frontend
-
-En la raíz del proyecto:
-
-1. Ejecutar `cd web`.
-1. Ejecutar `npm install`.
-1. Ejecutar `npm start` o `npm run dev`.
-1. Abrir la página http://localhost:3000
-
 ## ¿Cuántos ejercicios hemos hecho?
 
-Por favor marca a continuación los ejericios que hayais terminado:
+Por favor marca a continuación los ejercicios que hayáis terminado:
 
-4.1 Node JS:
+**4.1 MYSQL I:**
 
-- [x] 1. Crea el proyecto
+- [x] 1.  Crea la base de datos.
+- [ ] 2.  Inserta valores a la bases de datos.
+- [ ] 3.  Crea un repositorio en Github.
+
+**4.2 MYSQL II:**
+
+- [ ] 1.  Consultas sobre las películas
+- [ ] 2.  Consultas sobre los actores.
+- [ ] 3.  Consultas sobre los usuarios.
+- [ ] 4.  Bonus: Agrega más campos a las tablas.
+
+**4.3 MYSQL III:**
+
+- [ ] 1.  Piensa qué relación es
+- [ ] 2.  Crea la relación User-Movies.
+- [ ] 3.  Crea la relación Movies-Actors.
+
+**4.4 Node JS:**
+
+- [ ] 1. Descarga el proyecto
 - [ ] 2. Arranca el backend
 - [ ] 3. Arranca el front end
 - [ ] 4. Prueba el proyecto
 - [ ] 5. Entiende el código del proyecto
 
-4.2 Express JS I:
+**4.5 Express JS I:**
 
-- [ ] 1. Pedir todas las películas
-- [ ] 2. Filtrar por género
-- [ ] 3. Ordenar por nombre
+- [ ] 1. Pide todas las películas
 
-4.3 Express JS II:
+**4.6 Express JS II:**
+
+- [ ] 1. Filtrar por género
+- [ ] 2. Ordenar por nombre
+- [ ] 3. Login
+- [ ] 4. Bonus: Mantén logueada a la usuaria
+
+**4.7 Express JS III:**
 
 - [ ] 1. Servidor de estáticos para React
 - [ ] 2. Servidor de estáticos para las fotos
-- [ ] 3. Peticiones POST con body params
-- [ ] 4. Mantener logada a la usuaria
+- [ ] 3. Crea un motor de plantillas
 
-4.4 Express JS III:
+  - [ ] 1. Obtener el id de la película a renderizar
+  - [ ] 2. Obtener la película
+  - [ ] 3. Renderiza una página cualquiera
+  - [ ] 4. Renderiza la película
+  - [ ] 5. Añade estilos
 
-- [ ] 1. Obtener el id de la película a renderizar
-- [ ] 2. Obtener la película
-- [ ] 3. Renderiza una página cualquiera
-- [ ] 4. Renderiza la película
-- [ ] 5. Añade estilos
+**4.8 Mongo I:**
 
-4.5 Bases de datos I:
+- [ ] 1. Configura MongoDB Atlas
+- [ ] 2. Crea la bases de datos Netflix
 
-- [ ] 1. Crear la base de datos
-- [ ] 2. Configura la base de datos en Node JS
-- [ ] 3. Haz un SELECT para obtener todas películas
-- [ ] 4. Mejora tu SELECT
-- [ ] 5. SELECT para el motor de plantillas
-- [ ] 6. Crear la tabla de usuarias
+**4.9 Mongo II:**
 
-4.6 Bases de datos I:
+- [ ] 1. Conexión con la bases de datos de MongoDB
+- [ ] 2. Modelos para las colecciones
+- [ ] 3. Listado de películas
+- [ ] 4.  Ordena por nombre
 
-- [ ] 1. Registro de nuevas usuarias en el front
-- [ ] 2. Registro de nuevas usuarias en el back
-- [ ] 3. Comprueba que no haya una usuaria registrada con el mismo email
-- [ ] 4. Actualiza el perfil de la usuaria en el front
-- [ ] 5. Cctualiza el perfil de la usuaria en el back
-- [ ] 6. Recupera los datos del perfil de la usuaria desde el front
-- [ ] 7. Recupera los datos del perfil de la usuaria desde el back
+**4.10 Mongo III:**
 
-4.7 Bases de datos I:
+- [ ] 1. Insertar Películas favoritas
+- [ ] 2. Asociar actores a un película
+- [ ] 3. Obtener Películas favoritas
 
-- [ ] 1. Pensar qué relación es
-- [ ] 2. Crear una relación N a N
-- [ ] 3. Crear el endpoint en el front
-- [ ] 4. Crear el endpoint en el back
-- [ ] 5. Obtener los ids de las películas de la usuaria
-- [ ] 6. Obtener todos los datos de las películas de la usuaria
+**4.11 Docker:**
+
+- [ ] 1. Crea un dockerfile
+- [ ] 2. Crea el `dockerignore`
+- [ ] 3. Crea un contenedor
+
+**Extras:**
+
+- [ ] 1. Registro de nuevas usuarias
+- [ ] 2. Dos contraseñas en el registro
+- [ ] 3. Comprueba la fortaleza de la contraseña
+- [ ] 4. Comprueba que no haya una usuaria registrada con el mismo email
+- [ ] 5. (Des)marca como favoritas las películas de la usuaria
+- [ ] 6. Recupera los datos del perfil de la usuaria
+- [ ] 7. Actualiza el perfil de la usuaria
