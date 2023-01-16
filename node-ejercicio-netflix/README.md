@@ -64,12 +64,11 @@ Por favor marca a continuación los ejercicios que hayáis terminado:
 - [ ] 1. Conexión con la bases de datos de MongoDB
 - [ ] 2. Modelos para las colecciones
 - [ ] 3. Listado de películas
-- [ ] 4.  Ordena por nombre
+- [ ] 4. Ordena por nombre
 
 **4.10 Mongo III:**
 
 - [ ] 1. Insertar Películas favoritas
-- [ ] 2. Asociar actores a un película
 - [ ] 3. Obtener Películas favoritas
 
 **4.11 Docker:**
