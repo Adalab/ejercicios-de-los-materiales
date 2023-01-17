@@ -138,7 +138,7 @@ const App = () => {
   const logout = () => {
     router.redirect('/');
     router.reload();
-    localStorage.remove();
+    localStorage.clear();
 
   };
 
