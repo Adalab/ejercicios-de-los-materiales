@@ -138,6 +138,8 @@ const App = () => {
   const logout = () => {
     router.redirect('/');
     router.reload();
+    localStorage.remove();
+
   };
 
   /*
@@ -194,7 +196,6 @@ const App = () => {
               sendProfileToApi={sendProfileToApi}
               userId={userId}
             />} />
-
       </Routes>
     </>
   );
