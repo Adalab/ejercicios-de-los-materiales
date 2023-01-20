@@ -36,7 +36,7 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 
 ## Qué vas hacer cada día
 
-2.1 Intro a la programación:
+#### 2.1 Intro a la programación:
 
 - [x] 1. Crea el proyecto
 - [ ] 2. Entiende el código html y css del proyecto
@@ -44,67 +44,67 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
      formulario
 - [ ] 4. **LISTADO:** Listado: Mostrar gatitos desde JS
 
-  2.2 Intro a la programación 2:
+#### 2.2 Intro a la programación 2:
 
 - [ ] 1. **LISTADO:** Mejora como se guarda la información
 - [ ] 2. **LISTADO - Bonus:** Nombre de gatitos en mayúsculas
 
-  2.3 Condicionales:
+#### 2.3 Condicionales:
 
 - [ ] 1. **FILTRAR:** Búsqueda por descripción.
 - [ ] 2. **LISTADO - Bonus:**: ¿Y si no hay raza?.
 
-  2.4 Eventos:
+#### 2.4 Eventos:
 
 - [ ] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
 - [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
 - [ ] 3. **FORMULARIO:** Cancelar formulario.
 
-  2.5 Funciones I:
+  #### 2.5 Funciones I:
 
 - [ ] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
 - [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
 - [ ] 3. **LISTADO:** Crear el gatito en HTML
 
-  2.6 Funciones II:
+  #### 2.6 Funciones II:
 
 - [ ] 1. **FORMULARIO:** Cancelar formulario.
 - [ ] 2. **FILTRAR:** Filtrar por descripción.
 - [ ] 3. **LISTADO - Bonus:**: ¿Y si no hay raza?.
 - [ ] 4. **BONUS:** Funciones dentro de funciones.
 
-  2.7 Objetos
+  #### 2.7 Objetos
 
 - [ ] 1. **LISTADO:** Convertir cada gatito en un objeto
 
-  2.8 Arrays
+  #### 2.8 Arrays
 
 - [ ] 1. **LISTADO:** Crear listado de gatitos I
 
-  2.9 Bucles
+  #### 2.9 Bucles
 
 - [ ] 1. **LISTADO:** Crear listado de gatitos II
 - [ ] 2. **FILTRAR:**: Filtrar por descripción
 
-  2.11 Arrays II
+#### 2.11 Arrays II
 
 - [ ] 1. Conoce el trabajo de tu pareja
 - [ ] 2. **FORMULARIO:** Agregar un nuevo gatito al listado
 
-  2.12 Métodos funcionales de arrays
+#### 2.12 Métodos funcionales de arrays
 
 - [ ] 1. **FILTRAR:** Filtrar por descripción
 - [ ] 2. **FILTRAR:** Filtrar por descripción y por raza
 
-  2.13 Peticiones al servidor I
+#### 2.13 Peticiones al servidor I
 
 - [ ] 1. **LISTADO:** Obtener listado de gatitos desde el servidor
 
-  2.13 Peticiones al servidor II
+#### 2.14 Peticiones al servidor II
 
 - [ ] 1. **LISTADO:** Guardar en el local storage
 - [ ] 1. **BONUS - FORMULARIO:** Crear un nuevo gatito en el servidor
 
-  2.13 DOM Avanzado
+#### 2.15 DOM Avanzado
 
 - [ ] 1. **LISTADO:** Cambiar a DOM Avanzado
