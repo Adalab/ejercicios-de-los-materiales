@@ -28,7 +28,7 @@ La aplicación está compuesta por una única página que contiene:
 
 ### ¿Qué encontramos en este repositorio ?
 
-En este repositorio encontrarás el html y los estilos de la página, aunque puedes cambiar la visualidad de la aplicación si queréis y ser tan creativas como queraís. Os recomendamos que lo hagáis luego que hayamos terminado el curso, ahora nos concentraremos en JS.
+En este repositorio encontrarás el html y los estilos de la página, aunque puedes cambiar la visualidad de la aplicación si queréis y ser tan creativas como queráis. Os recomendamos que lo hagáis luego que hayamos terminado el curso, ahora nos concentraremos en JS.
 
 Para que sepáis que vamos haciendo durante el módulo, os dejamos el listado de tareas que tienen que completar por lección, asi saben cada momento por donde váis.
 
