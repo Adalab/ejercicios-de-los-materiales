@@ -60,28 +60,28 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 - [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
 - [ ] 3. **FORMULARIO:** Cancelar formulario.
 
-  #### 2.5 Funciones I:
+#### 2.5 Funciones I:
 
 - [ ] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
 - [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
 - [ ] 3. **LISTADO:** Crear el gatito en HTML
 
-  #### 2.6 Funciones II:
+#### 2.6 Funciones II:
 
 - [ ] 1. **FORMULARIO:** Cancelar formulario.
 - [ ] 2. **FILTRAR:** Filtrar por descripción.
 - [ ] 3. **LISTADO - Bonus:**: ¿Y si no hay raza?.
 - [ ] 4. **BONUS:** Funciones dentro de funciones.
 
-  #### 2.7 Objetos
+#### 2.7 Objetos
 
 - [ ] 1. **LISTADO:** Convertir cada gatito en un objeto
 
-  #### 2.8 Arrays
+#### 2.8 Arrays
 
 - [ ] 1. **LISTADO:** Crear listado de gatitos I
 
-  #### 2.9 Bucles
+#### 2.9 Bucles
 
 - [ ] 1. **LISTADO:** Crear listado de gatitos II
 - [ ] 2. **FILTRAR:**: Filtrar por descripción
