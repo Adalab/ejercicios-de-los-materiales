@@ -13,6 +13,6 @@ El diseño lo podéis inspeccionar en este proyecto de [zeplin](https://zpl.io/D
 
 ### HTML y CSS
 
-Este repositorio contiene el HTML y CSS de la página del formulario para crear el proyecto, pero ops! el equipo que estaba trabajando fue transferido a otro proyecto y este se ha quedado a medias, además durante el trabajo no han respetado el `mobile first` y solo está empezado la maquetación para desktop.
+Este repositorio contiene el HTML y CSS de la página del formulario para crear el proyecto. Lo que ¡Vaya! el equipo que estaba trabajando fue transferido a otro proyecto y este se ha quedado a medias, además durante el trabajo no han respetado el `mobile first` y solo está empezado la maquetación para desktop.
 
-**Si vuestro equipo decide utilizar este HTML de base deberá heredar el código y completar el diseño.**
+Vamos a tener que darle una vuelta al código. **Si vuestro equipo decide utilizar este HTML de base deberá heredar el código y completar el diseño.**
