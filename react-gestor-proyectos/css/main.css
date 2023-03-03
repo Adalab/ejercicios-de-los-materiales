@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  background-color: #302c42;
+  height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header .text {
+  color: white;
+}
+
+.main {
+  display: flex;
+  padding-top: 50px;
+  height: 80vh;
+}
+.main .title {
+  color: #ffffff;
+  text-align: center;
+}
+
+.main .ask-info {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.main .ask-info .subtitle {
+  padding-bottom: 10px;
+}
+
+.main .ask-info .line {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.main .preview {
+  width: 60%;
+}
+
+.main .form {
+  background-color: #302c42;
+  width: 40%;
+}
+
+.main .project,
+.main .autor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+}
+
+.main .input,
+.textarea {
+  background-color: #302c42;
+  border-color: white;
+  border-radius: 40px;
+  height: 42.72px;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+.main .input::placeholder,
+.textarea::placeholder {
+  color: #ffffff;
+}
+
+.main .textarea {
+  height: 110px;
+}
+
+.main .buttons-img {
+  text-align: center;
+}
+
+.main .btn,
+.main .btn-large {
+  width: 160px;
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+  border: none;
+
+  height: 43px;
+  background: linear-gradient(90deg, #8176af -1.57%, #c0b7e8 98.43%);
+  border-radius: 40px;
+}
+
+.main .btn-large {
+  width: 200px;
+  border: solid 2px white;
+}
+
+.main .preview {
+  padding: 20px;
+}
+
+.main .preview .image {
+  object-fit: cover;
+  width: 100%;
+  height: 80%;
+}
+
+.main .preview .autor {
+  background-color: white;
+  color: #3e3e3e;
+  width: 90%;
+  height: 50%;
+  transform: translateY(-100px);
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+.info-autor {
+  width: 40%;
+  text-align: center;
+}
+
+.info-autor .image {
+  border-radius: 50%;
+  width: 80px;
+  height: 110px;
+}
+
+.info-autor .job {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+
+.info-autor .name {
+  font-size: 16px;
+}
+
+.info-project {
+  width: 60%;
+}
+
+.info-project .subtitle {
+  font-size: 14px;
+  text-align: center;
+}
+.info-project .title {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.info-project .desc {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.info-project .slogan {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.info-project .line {
+  width: 100%;
+  border: 0;
+  height: 1px;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(1, 1, 1, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.btn-color {
+  border-radius: 20px;
+  width: 85px;
+  height: 30px;
+  font-weight: bold;
+}
+
+.btn-color-dark {
+  background-color: black;
+  color: white;
+}
+
+.technologies {
+  background-color: lightgray;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 10px;
+  width: 70%;
+}
+
+.card {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
