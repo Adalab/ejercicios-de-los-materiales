@@ -1,8 +1,10 @@
-## Proyectos Molones - In Progress
+## :construction: Proyectos Molones - In Progress
+
+![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20PROGRESS-green)
 
 En este proyecto vamos a realizar una aplicación web que nos permite crear una página para hablar sobre un proyecto personal o un proyecto que nos mole mucho. En la página web podemos introducir los datos del proyecto y obtener una vista maquetada con esta información.
 
-### Diseño
+### :hammer: Diseño
 
 El diseño lo podéis inspeccionar en este proyecto de [zeplin](https://zpl.io/DlrJNMl). En este diseño debéis tener en cuenta:
 
@@ -11,7 +13,7 @@ El diseño lo podéis inspeccionar en este proyecto de [zeplin](https://zpl.io/D
 - Las pantallas dentro del Zeplin son tanto para el proyecto del módulo 3 y el módulo 4.
 - En el diseño no hay una página de inicio que luego te lleve a la página del formulario para crear un proyecto, pero sois libres de crearla si queréis.
 
-### HTML y CSS
+### :woman_technologist: HTML y CSS
 
 Este repositorio contiene el HTML y CSS de la página del formulario para crear el proyecto. Lo que ¡Vaya! el equipo que estaba trabajando fue transferido a otro proyecto y este se ha quedado a medias, además durante el trabajo no han respetado el `mobile first` y solo está empezado la maquetación para desktop.
 
