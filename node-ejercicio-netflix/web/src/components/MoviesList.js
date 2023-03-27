@@ -11,7 +11,7 @@ const MoviesList = props => {
         <li key={movie.id} className="card">
           <img className="card__img" src={movie.image} alt={`Carátula de ${movie.title}`} />
           <h3 className="card__title">{movie.title}</h3>
-          <p className="card__description">Género: {movie.gender}</p>
+          <p className="card__description">Género: {movie.genre}</p>
         </li>
       );
     });
