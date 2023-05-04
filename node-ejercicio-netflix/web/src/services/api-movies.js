@@ -13,14 +13,14 @@ const getMoviesFromApi = () => {
           {
             id: '1',
             title: 'Gambita de dama',
-            gender: 'Drama',
+            genre: 'Drama',
             image:
               '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/images/gambito-de-dama.jpg'
           },
           {
             id: '2',
             title: 'Friends',
-            gender: 'Comedia',
+            genre: 'Comedia',
             image:
               '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/images/friends.jpg'
           }

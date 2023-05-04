@@ -25,23 +25,23 @@ const App = () => {
   const [signUpErrorMessage, setSignUpErrorMessage] = useState('');
   // state: movies
   const [appMovies, setAppMovies] = useState([]);
-  const [allMoviesOptionGender, setAllMoviesOptionGender] = useState('');
+  const [allMoviesOptionGenre, setAllMoviesOptionGenre] = useState('');
   const [allMoviesOptionSort, setAllMoviesOptionSort] = useState('asc');
 
   /*
   useEffect: obtener las películas del API.
-  Se ejecuta cuando allMoviesOptionGender o allMoviesOptionSort cambian de valor.
+  Se ejecuta cuando allMoviesOptionGenre o allMoviesOptionSort cambian de valor.
   Como queremos que el back devuelva las películas filtradas por género y ordenadas por nombre estamos pasando a getMoviesFromApi estos dos valores.
   */
   useEffect(() => {
     const params = {
-      gender: allMoviesOptionGender,
+      genre: allMoviesOptionGenre,
       sort: allMoviesOptionSort
     };
     apiMovies.getMoviesFromApi(params).then(response => {
       setAppMovies(response.movies);
     });
-  }, [allMoviesOptionGender, allMoviesOptionSort]);
+  }, [allMoviesOptionGenre, allMoviesOptionSort]);
 
   /*
   useEffect: obtener el perfil de la usuaria.
@@ -148,8 +148,8 @@ const App = () => {
   En el primer useEffect le decimos que cuando estos datos cambien vuelva a pedir las películas al API.
   */
   const handleAllMoviesOptions = data => {
-    if (data.key === 'gender') {
-      setAllMoviesOptionGender(data.value);
+    if (data.key === 'genre') {
+      setAllMoviesOptionGenre(data.value);
     } else if (data.key === 'sort') {
       setAllMoviesOptionSort(data.value);
     }
@@ -169,7 +169,7 @@ const App = () => {
           element={
             <AllMovies
               movies={appMovies}
-              allMoviesOptionGender={allMoviesOptionGender}
+              allMoviesOptionGenre={allMoviesOptionGenre}
               allMoviesOptionSort={allMoviesOptionSort}
               handleAllMoviesOptions={handleAllMoviesOptions}
             />

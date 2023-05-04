@@ -76,7 +76,7 @@ const getUserMoviesFromApi = userId => {
           {
             id: 1,
             title: 'Gambita de dama',
-            gender: 'Drama',
+            genre: 'Drama',
             image:
               '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/images/gambito-de-dama.jpg'
           }
