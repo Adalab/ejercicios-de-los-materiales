@@ -40,9 +40,7 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 
 - [x] 1. Crea el proyecto
 - [ ] 2. Entiende el código html y css del proyecto
-- [ ] 3. **FORMULARIO:** Mostrar
-     formulario
-- [ ] 4. **LISTADO:** Listado: Mostrar gatitos desde JS
+- [ ] 3. **LISTADO:** Listado: Mostrar gatitos desde JS
 
 #### 2.2 Intro a la programación 2:
 
@@ -56,9 +54,8 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 
 #### 2.4 Eventos:
 
-- [ ] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
-- [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
-- [ ] 3. **FORMULARIO:** Cancelar formulario.
+- [ ] 1. **FORMULARIO:** Adicionar nuevo gatito.
+- [ ] 2. **FORMULARIO:** Cancelar formulario.
 
 #### 2.5 Funciones I:
 
@@ -68,10 +65,10 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 
 #### 2.6 Funciones II:
 
-- [ ] 1. **FORMULARIO:** Cancelar formulario.
-- [ ] 2. **FILTRAR:** Filtrar por descripción.
-- [ ] 3. **LISTADO - Bonus:**: ¿Y si no hay raza?.
-- [ ] 4. **BONUS:** Funciones dentro de funciones.
+- [ ] 1. **FILTRAR:** Filtrar por descripción.
+- [ ] 2. **LISTADO - Bonus:**: ¿Y si no hay raza?.
+- [ ] 3. **BONUS:** Funciones dentro de funciones.
+- [ ] 4. **FORMULARIO - Bonus::** Cancelar formulario.
 
 #### 2.7 Objetos
 
