@@ -29,7 +29,7 @@ server.post('/user', (req, res) => {
   console.log('Query param userName:', req.query.userName);
   console.log('Query param userEmail:', req.query.userEmail);
 
-  // add new user to daba base
+  // add new user to dababase
   users.push({
     name: req.query.userName,
     email: req.query.userEmail

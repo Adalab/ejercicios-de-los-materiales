@@ -8,17 +8,17 @@
   </head>
   <body class="page">
     <header>
-      <h1>Express: Request body params</h1>
+      <h1>Express: Autenticación y Autorización</h1>
     </header>
 
     <main>
       <form>
         <div class="border--medium">
           <label>
-            Escribe algo en este nombre
-            <input type="text" class="js-input-name form__input-text" value="Maricarmen" />
-            y en este email
-            <input type="text" class="js-input-email form__input-text" value="mari@gmail.com" />
+            Escribe tu email
+            <input type="text" class="js-input-name form__input-text" value="mari@gmail.com" />
+            y en este tu contraseña
+            <input type="text" class="js-input-email form__input-text" value="qwerty" />
             y pulsa en
           </label>
           <input type="button" class="js-btn-post-new-user form__btn" value="enviar" />
@@ -28,10 +28,16 @@
         <div class="border--medium">
           <label>
             Pulsa <input type="button" class="js-btn-get-users form__btn" value="aquí" /> para
-            obtener los usuarios:
+            obtener los artículos:
           </label>
           <pre class="js-get-users-result text--code"></pre>
         </div>
+
+        <label>
+          <input type="button" class="js-btn-close-session form__btn" value="Cerrar sesión" />
+          <pre class="js-close-session-result text--code"></pre>
+ 
+        </label> 
       </form>
     </main>
 
