@@ -61,7 +61,6 @@ Por favor marca a continuación los ejercicios que hayáis terminado:
 
 - [ ] 1. Test Endpoint Movies
 - [ ] 2. Test Endpoint Register
-- [ ]
 
 **4.10 Fundamentos de MongoDB:**
 
