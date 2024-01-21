@@ -30,15 +30,4 @@ Además de estas piezas tendremos un dado de 4 caras donde cada cara representa 
 - Descargas una rana 🐸
 - Grogu se mueve una casilla 👣
 
-Además habrá una ficha que represente dónde está Grogu. Ganarás el juego si consigues descargar toda la mercancía. Perderás si Grogu llega a
-la última casilla (el armario).
-
-### Fichas
-
-- ficha de zona de carga (x6)
-- ficha de armario (x1)
-- galletas (x3)
-- ranas (x3)
-- huevos de rana (x3)
-- dado (x1)
-- grogu (x1)
+Además habrá una ficha que represente dónde está Grogu. Ganarás el juego si consigues descargar toda la mercancía. Perderás si Grogu llega a la última casilla (el armario).
