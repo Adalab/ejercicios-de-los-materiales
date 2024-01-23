@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <title>Cuidado con Groku</title>
   </head>
-  <body>
-    <div class="page">
+  <body class="page">
+    <header>
       <h1>¡Cuidado con Grogu!</h1>
-      <div class="board">
+    </header>
+    <main class="page">
+      <section class="board">
         <div class="cell"><div class="grogu">👣</div></div>
         <div class="cell"></div>
         <div class="cell"></div>
@@ -17,25 +19,31 @@
         <div class="cell"></div>
         <div class="cell"></div>
         <div class="cell"></div>
-      </div>
-      <div><button class="dice">Lanzar Dado</button></div>
-      <div class="game-status">En curso</div>
-      <button class="restart-button">Reiniciar Juego</button>
-      <div class="goods-container">
+      </section>
+
+      <section>
+        <button class="dice">Lanzar Dado</button>
+        <div class="game-status">En curso</div>
+      </section>
+
+      <section class="goods-container">
         <div class="goods-item">🍪</div>
         <div class="goods-item">🍪</div>
         <div class="goods-item">🍪</div>
-      </div>
-      <div class="goods-container">
+      </section>
+      <section class="goods-container">
         <div class="goods-item">🥚</div>
         <div class="goods-item">🥚</div>
         <div class="goods-item">🥚</div>
-      </div>
-      <div class="goods-container">
+      </section>
+      <section class="goods-container">
         <div class="goods-item">🐸</div>
         <div class="goods-item">🐸</div>
         <div class="goods-item">🐸</div>
-      </div>
-    </div>
+      </section>
+      <section>
+        <button class="restart-button">Reiniciar Juego</button>
+      </section>
+    </main>
   </body>
 </html>
