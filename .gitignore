@@ -8,7 +8,7 @@ lerna-debug.log*
 package-lock.json
 
 # macOS
-*.DS_Store
+.DS_Store
 .AppleDouble
 .LSOverride
 # Diagnostic reports (https://nodejs.org/api/report.html)

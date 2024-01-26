@@ -1,0 +1,141 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('../images/grogu.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: lightgrey 0.2px solid;
+}
+
+.grogu {
+    font-size: 50px;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-20%);
+    }
+}
+
+.dice {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.dice:hover {
+    transform: scale(1.1);
+}
+
+.game-status {
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 10px;
+}
+
+.restart-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+}
+
+.restart-button:hover {
+    background-color: #c9302c;
+}
+
+.goods-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.goods-item {
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+/* Añade estilos para el título y los contadores de mercancía aquí */
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 20px;
+}
+
+/* Contadores de mercancías */
+.goods-count {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.5);
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
