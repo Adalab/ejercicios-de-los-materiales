@@ -2,7 +2,17 @@
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20PROGRESS-green)
 
-En este proyecto vamos a realizar una aplicación web que nos permite crear una página para hablar sobre un proyecto personal o un proyecto que nos mole mucho. En la página web podemos introducir los datos del proyecto y obtener una vista maquetada con esta información.
+
+## IN Progress
+Tenemos un primer intento de maquetación de otra empresa que finalmente no pudo con la complejidad del proyecto.
+
+Dado el diseño de la página, empezaron a maquetar la página del formulario para crear una tarjeta. El diseño no está completo (faltan por ajustar detalles y el responsive). Espero que os ayude a avanzar en el proyecto.
+
+## Descripción
+
+En este proyecto vamos a realizar una aplicación web que nos permite crear un escaparates de proyectos que nos molen mucho. En la página web podemos:
+-  Introducir los datos del proyecto y obtener una vista detallada del mismo.
+-  Ver una lista de proyectos que ya hemos creado.
 
 ### :hammer: Diseño
 
@@ -15,6 +25,4 @@ El diseño lo podéis inspeccionar en este proyecto de [zeplin](https://zpl.io/D
 
 ### :woman_technologist: HTML y CSS
 
-Este repositorio contiene el HTML y CSS de la página del formulario para crear el proyecto. Lo que ¡Vaya! el equipo que estaba trabajando fue transferido a otro proyecto y este se ha quedado a medias, además durante el trabajo no han respetado el `mobile first` y solo está empezado la maquetación para desktop.
-
-Vamos a tener que darle una vuelta al código. **Si vuestro equipo decide utilizar este HTML de base deberá heredar el código y completar el diseño.**
+Este repositorio contiene el HTML y CSS de la página del formulario para crear el proyecto. Lo que ¡Vaya! el equipo que estaba trabajando no lo ha completado y este se ha quedado a medias. Vamos a tener que darle una vuelta al código. **Si vuestro equipo decide utilizar este HTML de base deberá heredar el código y completar el diseño.**
