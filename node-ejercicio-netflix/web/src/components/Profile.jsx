@@ -1,31 +1,38 @@
-import React, { useState } from 'react';
+import PropTypes from "prop-types";
+import { useState } from "react";
 
-const Profile = props => {
-  const [name, setName] = useState(props.userName || '');
-  const [email, setEmail] = useState(props.userEmail || '');
-  const [password, setPassword] = useState(props.userPassword || '');
+const Profile = ({
+  sendProfile,
+  userName,
+  userEmail,
+  userPassword,
+  userId,
+}) => {
+  const [name, setName] = useState(userName || "");
+  const [email, setEmail] = useState(userEmail || "");
+  const [password, setPassword] = useState(userPassword || "");
 
   // events
 
-  const handleName = ev => {
+  const handleName = (ev) => {
     setName(ev.target.value);
   };
 
-  const handleEmail = ev => {
+  const handleEmail = (ev) => {
     setEmail(ev.target.value);
   };
 
-  const handlePassword = ev => {
+  const handlePassword = (ev) => {
     setPassword(ev.target.value);
   };
 
-  const handleForm = ev => {
+  const handleForm = (ev) => {
     ev.preventDefault();
     // enviamos los datos a App y este al API
-    props.sendProfileToApi(props.userId, {
+    sendProfile(userId, {
       name: name,
       email: email,
-      password: password
+      password: password,
     });
   };
 
@@ -71,10 +78,22 @@ const Profile = props => {
           onChange={handlePassword}
         />
 
-        <input className="form__btn display-block" type="submit" value="Guardar" />
+        <input
+          className="form__btn display-block"
+          type="submit"
+          value="Guardar"
+        />
       </form>
     </section>
   );
+};
+
+Profile.propTypes = {
+  sendProfile: PropTypes.func.isRequired,
+  userName: PropTypes.string,
+  userEmail: PropTypes.string,
+  userPassword: PropTypes.string,
+  userId: PropTypes.string,
 };
 
 export default Profile;

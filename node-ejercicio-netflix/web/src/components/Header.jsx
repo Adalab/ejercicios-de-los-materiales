@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const Header = props => {
+const Header = ({ isUserLogged, logout }) => {
   const renderUnloggedUserLinks = () => {
-    if (props.isUserLogged === false)
+    if (isUserLogged === false)
       return (
         <>
           <li className="nav__item">
@@ -21,7 +21,7 @@ const Header = props => {
   };
 
   const renderLoggedUserLinks = () => {
-    if (props.isUserLogged === true)
+    if (isUserLogged === true)
       return (
         <>
           <li className="nav__item">
@@ -35,7 +35,7 @@ const Header = props => {
             </Link>
           </li>
           <li className="nav__item">
-            <span className="nav__link" onClick={props.logout}>
+            <span className="nav__link" onClick={logout}>
               Cerrar sesión
             </span>
           </li>
@@ -61,6 +61,11 @@ const Header = props => {
       </nav>
     </header>
   );
+};
+
+Header.propTypes = {
+  isUserLogged: PropTypes.bool,
+  logout: PropTypes.func.isRequired,
 };
 
 export default Header;

@@ -1,10 +1,15 @@
-import React from "react";
+import PropTypes from "prop-types";
 import MoviesList from "./MoviesList";
 import "../styles/AppMovies.scss";
 
-const AllMovies = (props) => {
+const AllMovies = ({
+  handleAllMoviesOptions,
+  allMoviesOptionGenre,
+  allMoviesOptionSort,
+  movies,
+}) => {
   const handleOptions = (ev) => {
-    props.handleAllMoviesOptions({
+    handleAllMoviesOptions({
       value: ev.target.value,
       key: ev.target.name,
     });
@@ -22,7 +27,7 @@ const AllMovies = (props) => {
             className="form__input-text"
             id="filterGenre"
             name="genre"
-            value={props.allMoviesOptionGenre}
+            value={allMoviesOptionGenre}
             onChange={handleOptions}
           >
             <option value="">Todas</option>
@@ -39,7 +44,7 @@ const AllMovies = (props) => {
               type="radio"
               name="sort"
               value="asc"
-              checked={props.allMoviesOptionSort === "asc"}
+              checked={allMoviesOptionSort === "asc"}
               onChange={handleOptions}
             />
           </label>
@@ -51,16 +56,23 @@ const AllMovies = (props) => {
               type="radio"
               name="sort"
               value="desc"
-              checked={props.allMoviesOptionSort === "desc"}
+              checked={allMoviesOptionSort === "desc"}
               onChange={handleOptions}
             />
           </label>
         </div>
       </form>
 
-      <MoviesList movies={props.movies} />
+      <MoviesList movies={movies} />
     </section>
   );
+};
+
+AllMovies.propTypes = {
+  handleAllMoviesOptions: PropTypes.func.isRequired,
+  allMoviesOptionGenre: PropTypes.string,
+  allMoviesOptionSort: PropTypes.string,
+  movies: PropTypes.array.isRequired,
 };
 
 export default AllMovies;

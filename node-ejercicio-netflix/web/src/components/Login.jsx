@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
+import PropTypes from "prop-types";
+import { useState } from "react";
 
-const Login = props => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const Login = ({ getLogin, loginErrorMessage }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   // events
 
-  const handleEmail = ev => {
+  const handleEmail = (ev) => {
     setEmail(ev.target.value);
   };
 
-  const handlePassword = ev => {
+  const handlePassword = (ev) => {
     setPassword(ev.target.value);
   };
 
-  const handleForm = ev => {
+  const handleForm = (ev) => {
     ev.preventDefault();
     // enviamos los datos a App y este al API
-    props.sendLoginToApi({
+    getLogin({
       email: email,
-      password: password
+      password: password,
     });
   };
 
@@ -27,10 +28,11 @@ const Login = props => {
 
   const renderErrorMessage = () => {
     // Si el API ha devuelto un error, App lo guarda en su estado y nos lo pasa por props
-    if (props.loginErrorMessage !== '') {
+    if (loginErrorMessage !== "") {
       return (
         <p className="border--medium border--warning mt-1">
-          Error en el login: <span className="text--bold">{props.loginErrorMessage}</span>
+          Error en el login:{" "}
+          <span className="text--bold">{loginErrorMessage}</span>
         </p>
       );
     }
@@ -64,12 +66,21 @@ const Login = props => {
           onChange={handlePassword}
         />
 
-        <input className="form__btn display-block" type="submit" value="Entrar" />
+        <input
+          className="form__btn display-block"
+          type="submit"
+          value="Entrar"
+        />
 
         {renderErrorMessage()}
       </form>
     </section>
   );
+};
+
+Login.propTypes = {
+  loginErrorMessage: PropTypes.string,
+  getLogin: PropTypes.func.isRequired,
 };
 
 export default Login;

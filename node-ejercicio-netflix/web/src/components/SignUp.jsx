@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
+import PropTypes from "prop-types";
+import { useState } from "react";
 
-const SignUp = props => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const SignUp = ({ getSignUp, signUpErrorMessage }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   // events
 
-  const handleEmail = ev => {
+  const handleEmail = (ev) => {
     setEmail(ev.target.value);
   };
 
-  const handlePassword = ev => {
+  const handlePassword = (ev) => {
     setPassword(ev.target.value);
   };
 
-  const handleForm = ev => {
+  const handleForm = (ev) => {
     ev.preventDefault();
     // Enviamos los datos a App y este al API
-    props.sendSingUpToApi({
+    getSignUp({
       email: email,
-      password: password
+      password: password,
     });
   };
 
@@ -27,10 +28,11 @@ const SignUp = props => {
 
   const renderErrorMessage = () => {
     // Si el API ha devuelto un error, APP lo guarda en el estado y nos lo pasa
-    if (props.signUpErrorMessage !== '') {
+    if (signUpErrorMessage !== "") {
       return (
         <p className="border--medium border--warning mt-1">
-          Error en el registro: <span className="text--bold">{props.signUpErrorMessage}</span>
+          Error en el registro:{" "}
+          <span className="text--bold">{signUpErrorMessage}</span>
         </p>
       );
     }
@@ -64,12 +66,21 @@ const SignUp = props => {
           onChange={handlePassword}
         />
 
-        <input className="form__btn display-block" type="submit" value="Registrar" />
+        <input
+          className="form__btn display-block"
+          type="submit"
+          value="Registrar"
+        />
 
         {renderErrorMessage()}
       </form>
     </section>
   );
+};
+
+SignUp.propTypes = {
+  getSignUp: PropTypes.func.isRequired,
+  signUpErrorMessage: PropTypes.string,
 };
 
 export default SignUp;
