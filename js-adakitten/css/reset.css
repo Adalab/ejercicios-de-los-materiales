@@ -92,6 +92,23 @@ video {
   vertical-align: baseline;
   box-sizing: border-box;
 }
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
