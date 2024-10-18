@@ -6,9 +6,9 @@ Por favor marca a continuación los ejercicios que hayáis terminado:
 
 **4.1 Fundamentos de MySQL:**
 
-- [x] 1.  Crea la base de datos.
+- [ ] 1.  Crea la base de datos.
 - [ ] 2.  Inserta valores a la bases de datos.
-- [ ] 3.  Crea un repositorio en Github.
+- [x] 3.  Crea un repositorio en Github.
 
 **4.2 CRUD MySQL:**
 
@@ -23,26 +23,38 @@ Por favor marca a continuación los ejercicios que hayáis terminado:
 - [ ] 2.  Crea la relación User-Movies.
 - [ ] 3.  Crea la relación Movies-Actors.
 
-**4.4 Fundamentos de Express JS:**
+**4.4 Queries avanzadas de SQL:**
 
-- [ ] 1. Descarga el proyecto
-- [ ] 2. Arranca el backend
+- [ ] 1. Queries avanzadas
+- [ ] 2. Descarga el proyecto
 - [ ] 3. Arranca el front end
-- [ ] 4. Prueba el proyecto
-- [ ] 5. Entiende el código del proyecto
+- [ ] 4. Prueba el front end
+- [ ] 5. Entiende el código de la carpeta web
 
-**4.5 Express JS con MySQL:**
+**4.5 NodeJS y ExpressJS:**
 
-- [ ] 1. Pide todas las películas
+- [ ] 1. Arranca el backend
+- [ ] 2. Arranca el frontend
+- [ ] 3. Prueba el proyecto
+- [ ] 4. Entiende el código del proyecto
+
+**4.6 Endpoints:**
+
+- [ ] 1. Pide todas las películas. En el front
+- [ ] 2. Pide todas las películas. En el back
+
+**4.7 ExpressJS con MySQL:**
+
+- [ ] 1. Conectar con la base de datos y mostrar todas las películas
 - [ ] 2. Servidor de estáticos para React
 - [ ] 3. Servidor de estáticos para las fotos
 
-**4.6 Peticiones con parámetros:**
+**4.8 Peticiones con parámetros:**
 
 - [ ] 1. Filtrar por género
 - [ ] 2. Ordenar por nombre
 
-**4.7 Motores de plantillas:**
+**4.9 Motores de plantillas:**
 
 - [ ] 1. Crea un motor de plantillas
   - [ ] 1. Obtener el id de la película a renderizar
@@ -51,33 +63,23 @@ Por favor marca a continuación los ejercicios que hayáis terminado:
   - [ ] 4. Renderiza la película
   - [ ] 5. Añade estilos
 
-**4.8 Autenticación y autorización:**
+**4.10 Autenticación JWT:**
 
 - [ ] 1. Registro de nuevas usuarias
 - [ ] 2. Login
 - [ ] 3. Bonus Mantén logueada a la usuaria
+
+**4.11 Autorización JWT:**
+
+- [ ] 1. Recupera los datos del perfil de la usuaria
+- [ ] 2. Actualiza el perfil de la usuaria
 
 **4.9 Testing:**
 
 - [ ] 1. Test Endpoint Movies
 - [ ] 2. Test Endpoint Register
 
-**4.10 Fundamentos de MongoDB:**
 
-- [ ] 1. Configura MongoDB Atlas
-- [ ] 2. Crea la bases de datos Netflix
-
-**4.11 Express JS y Mongo DB:**
-
-- [ ] 1. Conexión con la bases de datos de MongoDB
-- [ ] 2. Modelos para las colecciones
-- [ ] 3. Listado de películas
-- [ ] 4. Ordena por nombre
-
-**4.12 Relaciones en MongoDB:**
-
-- [ ] 1. Insertar Películas favoritas
-- [ ] 2. Obtener Películas favoritas
 
 **Extras:**
 
