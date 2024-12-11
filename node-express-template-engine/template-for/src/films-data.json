@@ -32,6 +32,21 @@
     "id": "999902",
     "title": "El perro del hortelano",
     "year": "1996",
-    "director": "Pilar Miró"
+    "director": "Pilar Miró",
+    "country": "España",
+    "awards": [
+      {
+        "year": 1996,
+        "info": "Nominación a Mejor Dirección en los Premios Goya"
+      },
+      {
+        "year": 1996,
+        "info": "Nominación a Mejor Guion Adaptado en los Premios Goya"
+      },
+      {
+        "year": 1996,
+        "info": "Premio Especial del Festival de Cine de Comedia de Peñíscola"
+      }
+    ]
   }
 ]
